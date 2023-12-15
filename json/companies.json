@@ -1,0 +1,42 @@
+[
+    {
+        "lat": 50.45262450814744,
+        "lng": 30.05448966851916,
+        "company": "GeekCode",
+        "address": "Somewhere in Ukraine",
+        "info": "Tech solutions for the future",
+        "marker": "blue"
+    },
+    {
+        "lat": 48.5528485362611,
+        "lng": 30.594128068567382,
+        "company": "ByteCrafters",
+        "address": "Somewhere in Ukraine",
+        "info": "Innovating IT landscapes",
+        "marker": "red"
+    },
+    {
+        "lat": 48.08062773642931,
+        "lng": 34.427010455053086,
+        "company": "CyberNauts",
+        "address": "Somewhere in Ukraine",
+        "info": "Navigating the digital world",
+        "marker": "pink"
+    },
+    {
+        "lat": 47.531958627268146,
+        "lng": 33.045271639687094,
+        "company": "DataWizards",
+        "address": "Somewhere in Ukraine",
+        "info": "Unleashing the power of data",
+        "marker": "orange"
+    },
+    {
+        "lat": 47.08062773642931,
+        "lng": 31.427010455053086,
+        "company": "InnoHub",
+        "address": "Somewhere in Ukraine",
+        "info": "Fueling creativity in IT",
+        "marker": "green"
+    }
+]
