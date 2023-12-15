@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const markers = L.markerClusterGroup();
 
     // Завантаження маркерів з зовнішнього JSON-файлу
-    fetch('../json/companies.json')
+    fetch('./json/companies.json')
         .then((response) => response.json())
         .then((addresses) => {
             addresses.forEach((address) => {
                 const customIcon = L.icon({
-                    iconUrl: `../markers/${address.marker}_marker.png`,
+                    iconUrl: `./markers/${address.marker}_marker.png`,
                     iconSize: [38, 38],
                     iconAnchor: [15, 42],
                 });
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((error) => console.error('Error loading addresses:', error));
 
     // Завантаження об'єкту областей України
-    fetch('../json/ukraine.geojson')
+    fetch('./json/ukraine.geojson')
         .then((response) => response.json())
         .then((data) => {
             L.geoJSON(data, {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((error) => console.error('Error loading Ukraine geoJSON:', error));
 
     // Завантаження географічного об'єкту границь України
-    fetch('../json/ukraine_border.geojson')
+    fetch('./json/ukraine_border.geojson')
         .then((response) => response.json())
         .then((data) => {
             L.geoJSON(data, {
