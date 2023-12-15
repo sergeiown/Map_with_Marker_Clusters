@@ -65,4 +65,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }).addTo(map);
         })
         .catch((error) => console.error('Error loading Ukraine border geoJSON:', error));
+
+    // Отримання елемента контейнера для кнопки
+    const buttonContainer = document.createElement('div');
+    buttonContainer.style.position = 'fixed';
+    buttonContainer.style.bottom = '10px';
+    buttonContainer.style.left = '10px';
+    buttonContainer.style.zIndex = '1000';
+    document.body.appendChild(buttonContainer);
+
+    // Створення кнопки
+    const openPageButton = document.createElement('button');
+    openPageButton.style.cursor = 'pointer';
+    openPageButton.addEventListener('click', () => {
+        window.open('https://thepage.ua/ua/karta-liniyi-frontu-v-ukrayini', '_blank');
+    });
+
+    openPageButton.innerHTML =
+        '<span style="font-weight: bold; font-size: larger;">Ознайомитися з поточною ситуацією</span><br><span style="font-weight: bold; font-size: larger;">по тимчасово окупованих територіях</span>';
+
+    buttonContainer.appendChild(openPageButton);
 });
