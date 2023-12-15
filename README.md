@@ -4,7 +4,7 @@
 
 Цей застосунок створений для візуалізації маркерів на мапі з використанням бібліотеки Leaflet та групування їх за допомогою Leaflet.markercluster. Застосунок покликаний відобразити розташування компаній на карті з можливістю групування маркерів у кластери.
 
-![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/c99a93f7-5aaa-443f-88ef-29c70380b97d)
+![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/ad7bdb88-d86a-43c1-9043-8a323a55a44d)
 
 ## Технічні засоби та бібліотеки
 
