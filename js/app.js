@@ -85,4 +85,26 @@ document.addEventListener('DOMContentLoaded', () => {
         '<span style="font-weight: bold; font-size: larger;">Ознайомитися з поточною ситуацією</span><br><span style="font-weight: bold; font-size: larger;">по тимчасово окупованих територіях</span>';
 
     buttonContainer.appendChild(openPageButton);
+
+    // Додавання легенди
+    fetch('./json/legend.json')
+        .then((response) => response.json())
+        .then((legendData) => {
+            const legend = L.control({ position: 'topright' });
+
+            legend.onAdd = function () {
+                const div = L.DomUtil.create('div', 'legend');
+                div.innerHTML +=
+                    '<div style="background-color: rgba(255, 255, 255, 0.5); padding: 5px; text-align: center;"><h2 style="margin-bottom: 0;">Легенда:</h2></div>';
+
+                legendData.forEach((item) => {
+                    div.innerHTML += `<div style="background-color: rgba(255, 255, 255, 0.5); padding: 5px;"><img src="./markers/${item.marker}_marker.png" style="width: 15px; height: 15px; margin-right: 5px;"> <b>${item.description}</b></div>`;
+                });
+
+                return div;
+            };
+
+            legend.addTo(map);
+        })
+        .catch((error) => console.error('Error loading legend data:', error));
 });

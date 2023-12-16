@@ -1,0 +1,22 @@
+[
+    {
+        "description": "компанії тип 1",
+        "marker": "blue"
+    },
+    {
+        "description": "компанії тип 2",
+        "marker": "red"
+    },
+    {
+        "description": "компанії тип 3",
+        "marker": "green"
+    },
+    {
+        "description": "компанії тип 4",
+        "marker": "orange"
+    },
+    {
+        "description": "без визначення",
+        "marker": "pink"
+    }
+]
