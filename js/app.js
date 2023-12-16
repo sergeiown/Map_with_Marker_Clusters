@@ -3,7 +3,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    const map = L.map('map').setView([49.0, 31.0], 6); // Центр та зум мапи
+    // Додавання тегу стилів до head
+    const styleTag = document.createElement('style');
+    styleTag.innerHTML = `
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #map {
+        height: 100%;
+        overflow: hidden;
+    }`;
+
+    document.head.appendChild(styleTag);
+
+    // Центровка та зум мапи
+    const map = L.map('map').setView([49.0, 31.0], 6);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
@@ -81,6 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
     openPageButton.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
     openPageButton.style.fontWeight = 'bold';
     openPageButton.style.fontSize = 'large';
+    openPageButton.addEventListener('mousedown', () => {
+        openPageButton.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+    });
+
+    openPageButton.addEventListener('mouseup', () => {
+        openPageButton.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    });
+
     openPageButton.addEventListener('click', () => {
         window.open('https://thepage.ua/ua/karta-liniyi-frontu-v-ukrayini', '_blank');
     });
@@ -99,14 +126,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 const div = L.DomUtil.create('div', 'legend');
                 div.style.border = '1px solid rgba(0, 0, 0, 0.2)';
                 div.style.borderRadius = '5px';
+                div.style.padding = '5px';
                 div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-                div.innerHTML +=
-                    '<div style="padding: 5px; text-align: center;"><h2 style="margin-bottom: 0;">Легенда:</h2></div>';
+
+                const legendTitle = document.createElement('div');
+                legendTitle.style.padding = '5px';
+                legendTitle.style.textAlign = 'center';
+                div.appendChild(legendTitle);
+
+                const h2 = document.createElement('h2');
+                h2.style.marginBottom = '0';
+                h2.style.marginTop = '0';
+                h2.innerText = 'Легенда:';
+                legendTitle.appendChild(h2);
 
                 legendData.forEach((item) => {
                     const innerDiv = document.createElement('div');
                     innerDiv.style.display = 'flex';
-                    innerDiv.style.alignItems = 'center'; // Додаємо вирівнювання по вертикалі
+                    innerDiv.style.alignItems = 'center';
                     innerDiv.style.padding = '2px';
                     innerDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
                     innerDiv.innerHTML = `<img src="./markers/${item.marker}_marker.png" style="width: 15px; height: 15px; margin-right: 5px;"> <b>${item.description}</b>`;
