@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     innerDiv.style.display = 'flex';
                     innerDiv.style.alignItems = 'center';
                     innerDiv.style.padding = '2px';
-                    innerDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
                     innerDiv.innerHTML = `<img src="./markers/${item.marker}_marker.png" style="width: 15px; height: 15px; margin-right: 5px;"> <b>${item.description}</b>`;
                     div.appendChild(innerDiv);
                 });
