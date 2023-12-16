@@ -13,6 +13,7 @@ export function createButton() {
     openPageButton.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
     openPageButton.style.fontWeight = 'bold';
     openPageButton.style.fontSize = 'large';
+    openPageButton.style.color = 'black';
     openPageButton.addEventListener('mousedown', () => {
         openPageButton.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
     });
