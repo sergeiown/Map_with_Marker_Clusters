@@ -1,5 +1,9 @@
 export function initializeMap() {
-    const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isMobile =
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        (window.matchMedia('(max-width: 600px)').matches && window.matchMedia('(orientation: portrait)').matches);
+
     const initialZoom = isMobile ? 5 : 6;
 
     const map = L.map('map').setView([49.0, 31.0], initialZoom);
