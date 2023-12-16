@@ -1,5 +1,8 @@
 export function initializeMap() {
-    const map = L.map('map').setView([49.0, 31.0], 6);
+    const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const initialZoom = isMobile ? 5 : 6;
+
+    const map = L.map('map').setView([49.0, 31.0], initialZoom);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
