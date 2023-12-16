@@ -18,5 +18,9 @@
     {
         "description": "без визначення",
         "marker": "pink"
+    },
+    {
+        "description": "кластер",
+        "marker": "cluster"
     }
 ]
