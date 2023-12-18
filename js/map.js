@@ -28,20 +28,20 @@ export function initializeMap() {
     };
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
-    layerControl.getContainer().style.opacity = 0.6;
+    layerControl.getContainer().style.opacity = 0.8;
 
     layerControl.getContainer().addEventListener('mouseenter', () => {
-        layerControl.getContainer().style.opacity = 0.9;
+        layerControl.getContainer().style.opacity = 1;
     });
 
     layerControl.getContainer().addEventListener('mouseleave', () => {
-        layerControl.getContainer().style.opacity = 0.6;
+        layerControl.getContainer().style.opacity = 0.8;
     });
 
     osmLayer.addTo(map);
 
     map.zoomControl.setPosition('bottomright');
-    map.zoomControl.getContainer().style.opacity = 0.6;
+    map.zoomControl.getContainer().style.opacity = 0.7;
 
     return map;
 }

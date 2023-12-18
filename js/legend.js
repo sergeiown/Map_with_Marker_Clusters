@@ -16,11 +16,11 @@ export function addLegend(map) {
                 legendTitle.style.textAlign = 'center';
                 div.appendChild(legendTitle);
 
-                const h2 = document.createElement('h2');
-                h2.style.marginBottom = '0';
-                h2.style.marginTop = '0';
-                h2.innerText = 'Легенда:';
-                legendTitle.appendChild(h2);
+                const h3 = document.createElement('h3');
+                h3.style.marginBottom = '0';
+                h3.style.marginTop = '0';
+                h3.innerText = 'Легенда:';
+                legendTitle.appendChild(h3);
 
                 legendData.forEach((item) => {
                     const innerDiv = document.createElement('div');
