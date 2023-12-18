@@ -8,12 +8,28 @@ export function initializeMap() {
 
     const map = L.map('map').setView([49.0, 31.0], initialZoom);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         opacity: 1,
         minZoom: 5,
         maxZoom: 17,
-    }).addTo(map);
+    });
+
+    const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenTopoMap contributors',
+        opacity: 1,
+        minZoom: 5,
+        maxZoom: 17,
+    });
+
+    const baseLayers = {
+        Звичайний: osmLayer,
+        Топографічний: topoLayer,
+    };
+
+    L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
+
+    osmLayer.addTo(map);
 
     return map;
 }
