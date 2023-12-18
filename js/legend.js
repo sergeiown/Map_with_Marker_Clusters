@@ -6,10 +6,10 @@ export function addLegend(map) {
 
             legend.onAdd = function () {
                 const div = L.DomUtil.create('div', 'legend');
-                div.style.border = '1px solid rgba(0, 0, 0, 0.2)';
+                div.style.border = '2px solid rgba(0, 0, 0, 0.2)';
                 div.style.borderRadius = '5px';
                 div.style.padding = '5px';
-                div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+                div.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
 
                 const legendTitle = document.createElement('div');
                 legendTitle.style.padding = '5px';
