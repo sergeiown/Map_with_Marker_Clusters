@@ -29,6 +29,9 @@ export function initializeMap() {
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
     layerControl.getContainer().style.opacity = 0.8;
+    layerControl.getContainer().style.fontWeight = 'bold';
+    layerControl.getContainer().style.fontSize = '15px';
+    layerControl.getContainer().style.lineHeight = '2';
 
     layerControl.getContainer().addEventListener('mouseenter', () => {
         layerControl.getContainer().style.opacity = 1;

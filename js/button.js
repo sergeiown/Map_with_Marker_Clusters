@@ -13,6 +13,7 @@ export function createButton() {
     openPageButton.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
     openPageButton.style.fontWeight = 'bold';
     openPageButton.style.fontSize = '15px';
+    openPageButton.style.lineHeight = '1.2';
     openPageButton.style.color = 'black';
     openPageButton.style.webkitTextFillColor = 'black';
 
