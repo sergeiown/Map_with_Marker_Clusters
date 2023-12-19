@@ -7,10 +7,10 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/ddc8242b-d906-4661-9e54-09f4645d586a" alt="Image 1">
+      <img src="https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/f438e4b3-df98-4611-bcfe-7b13c8f19e3b" alt="Image 1">
     </td>
     <td>
-      <img src="https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/8911f266-bedc-4a50-a9e8-388f323382bf" alt="Image 2">
+      <img src="https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/435dcedc-65c9-4ce7-944a-8d86e3dc9037" alt="Image 2">
     </td>
   </tr>
 </table>
