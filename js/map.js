@@ -23,7 +23,7 @@ export function initializeMap() {
     });
 
     const baseLayers = {
-        Звичайний: osmLayer,
+        Адміністративний: osmLayer,
         Топографічний: topoLayer,
     };
 
