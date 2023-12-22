@@ -7,7 +7,7 @@
 | Приклади зовнішнього вигляду:  ||
 | --- | --- |
 | ![Image 1](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/f438e4b3-df98-4611-bcfe-7b13c8f19e3b) | ![Image 2](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/435dcedc-65c9-4ce7-944a-8d86e3dc9037) |
-| Звичайний шар                  | Топографічний шар                      |
+| Адміністративний шар                  | Топографічний шар                      |
 
 ## Технічні засоби та бібліотеки
 
