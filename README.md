@@ -1,6 +1,6 @@
 # "Map with Marker Clusters
 
-# [EN](https://sergeiown.github.io/Map_with_Marker_Clusters/readme.md) | [UA](https://sergeiown.github.io/Map_with_Marker_Clusters/readme-ua.md)
+# [EN](https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/README.md) | [UA](https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/README-UA.md)
 
 ## Overview
 
