@@ -1,4 +1,4 @@
-# "Map with Marker Clusters
+# "Map with Marker Clusters"
 
 # [EN](https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/README.md) | [UA](https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/README-UA.md)
 
