@@ -22,8 +22,8 @@ export function addUkraineBorderGeoJSON(map) {
             L.geoJSON(data, {
                 style: {
                     color: '#FFD700',
-                    weight: 8,
-                    opacity: 1,
+                    weight: 9,
+                    opacity: 0.8,
                     dashArray: '5',
                     fillColor: '#3388ff',
                     fillOpacity: 0.3,
