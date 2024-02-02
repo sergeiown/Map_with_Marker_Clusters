@@ -1,5 +1,6 @@
 import { addStyles } from '../js/styles.js';
-import { initializeMap, addMarkers } from '../js/map.js';
+import { initializeMap } from '../js/map.js';
+import { addMarkers } from './markers.js';
 import { addUkraineGeoJSON, addUkraineBorderGeoJSON } from '../js/geojson.js';
 import { createButton } from '../js/button.js';
 import { addLegend } from '../js/legend.js';
