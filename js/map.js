@@ -8,7 +8,6 @@ export function initializeMap() {
 
     const map = L.map('map').setView([49.0, 31.0], initialZoom);
 
-    // Default centre and zoom button
     const centerButton = L.Control.extend({
         options: {
             position: 'topleft',
@@ -42,7 +41,6 @@ export function initializeMap() {
     });
     map.addControl(new centerButton());
 
-    // Layer control
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         opacity: 1,
