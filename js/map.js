@@ -8,6 +8,41 @@ export function initializeMap() {
 
     const map = L.map('map').setView([49.0, 31.0], initialZoom);
 
+    // Default centre and zoom button
+    const centerButton = L.Control.extend({
+        options: {
+            position: 'topleft',
+        },
+        onAdd: function () {
+            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
+
+            const image = L.DomUtil.create('img', 'center-image', container);
+            image.src = './markers/default.png';
+
+            container.style.opacity = 0.8;
+            container.style.width = '44px';
+            container.style.height = '44px';
+            container.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+            container.style.border = '2px solid rgba(0, 0, 0, 0.2)';
+            container.style.borderRadius = '5px';
+            container.style.display = 'flex';
+            container.style.justifyContent = 'center';
+            container.style.alignItems = 'center';
+            container.style.cursor = 'pointer';
+
+            image.style.width = '75%';
+            image.style.opacity = '0.75';
+
+            container.addEventListener('click', function () {
+                map.setView([49.0, 31.0], initialZoom);
+            });
+
+            return container;
+        },
+    });
+    map.addControl(new centerButton());
+
+    // Layer control
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         opacity: 1,

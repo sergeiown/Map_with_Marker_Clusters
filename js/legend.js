@@ -9,6 +9,7 @@ export function addLegend(map) {
                 div.style.border = '2px solid rgba(0, 0, 0, 0.2)';
                 div.style.borderRadius = '5px';
                 div.style.padding = '5px';
+                div.style.marginTop = '50px';
                 div.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
 
                 const legendTitle = document.createElement('div');

@@ -1,7 +1,7 @@
 export function createButton() {
     const buttonContainer = document.createElement('div');
     buttonContainer.style.position = 'fixed';
-    buttonContainer.style.bottom = '10px';
+    buttonContainer.style.bottom = '20px';
     buttonContainer.style.left = '10px';
     buttonContainer.style.zIndex = '1000';
     document.body.appendChild(buttonContainer);
