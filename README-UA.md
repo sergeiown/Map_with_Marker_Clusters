@@ -6,9 +6,13 @@
 
 Цей застосунок створений для візуалізації маркерів на мапі з використанням бібліотеки `Leaflet` та групування їх за допомогою `Leaflet.markercluster`. Застосунок покликаний відобразити розташування компаній на карті з можливістю групування маркерів у кластери.
 
+| Структура:  ||
+| --- | --- |
+| Залежності | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/72f36eea-5490-460c-afb7-4b561128e61d) |
+
 | Приклади зовнішнього вигляду:  ||
 | --- | --- |
-| ![Image 1](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/f438e4b3-df98-4611-bcfe-7b13c8f19e3b) | ![Image 2](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/435dcedc-65c9-4ce7-944a-8d86e3dc9037) |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/47a1b607-0aa3-4782-8de7-875e1afcb0c3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4a603589-777b-4335-b456-4d29458d49e4) |
 | Адміністративний шар                  | Топографічний шар                      |
 
 ## Технічні засоби та бібліотеки
