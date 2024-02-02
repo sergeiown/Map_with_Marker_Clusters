@@ -6,9 +6,13 @@
 
 This application is designed to visualize markers on a map using the `Leaflet` library and group them using`Leaflet.markercluster`. The application is designed to display the location of companies on the map with the ability to group markers into clusters.
 
+| Structure:  ||
+| --- | --- |
+| Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/72f36eea-5490-460c-afb7-4b561128e61d) |
+
 | Appearance:  ||
 | --- | --- |
-| ![Image 1](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/f438e4b3-df98-4611-bcfe-7b13c8f19e3b) | ![Image 2](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/435dcedc-65c9-4ce7-944a-8d86e3dc9037) |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/47a1b607-0aa3-4782-8de7-875e1afcb0c3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4a603589-777b-4335-b456-4d29458d49e4) |
 | Administrative layer                  | Topographic layer                      |
 
 ## Technical resources and libraries
