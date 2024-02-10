@@ -10,10 +10,10 @@
 | --- | --- |
 | Залежності | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/72f36eea-5490-460c-afb7-4b561128e61d) |
 
-| Приклади зовнішнього вигляду:  ||
-| --- | --- |
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/47a1b607-0aa3-4782-8de7-875e1afcb0c3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4a603589-777b-4335-b456-4d29458d49e4) |
-| Адміністративний шар                  | Топографічний шар                      |
+| Зовнішній вигляд:  |||
+| --- | --- | --- |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/47a1b607-0aa3-4782-8de7-875e1afcb0c3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4a603589-777b-4335-b456-4d29458d49e4) | ![mobile](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/ac40cae1-d5b6-49d8-ab6e-9f188e57d41b) |
+| Адміністративний шар                  | Топографічний шар                      | Версія для мобільних пристроїв |
 
 ## Технічні засоби та бібліотеки
 
