@@ -10,10 +10,10 @@ This application is designed to visualize markers on a map using the `Leaflet` l
 | --- | --- |
 | Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/72f36eea-5490-460c-afb7-4b561128e61d) |
 
-| Appearance:  ||
-| --- | --- |
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/47a1b607-0aa3-4782-8de7-875e1afcb0c3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4a603589-777b-4335-b456-4d29458d49e4) |
-| Administrative layer                  | Topographic layer                      |
+| Appearance:  |||
+| --- | --- | --- |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/47a1b607-0aa3-4782-8de7-875e1afcb0c3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4a603589-777b-4335-b456-4d29458d49e4) | ![mobile](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/aede5ee7-4ef7-4348-9469-21862e254bf8) |
+| Administrative layer                  | Topographic layer                      | Mobile view |
 
 ## Technical resources and libraries
 
