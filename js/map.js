@@ -34,6 +34,7 @@ export function initializeMap() {
 
             container.addEventListener('click', function () {
                 map.setView([49.0, 31.0], initialZoom);
+                document.getElementById('company-dropdown').selectedIndex = 0;
             });
 
             return container;
