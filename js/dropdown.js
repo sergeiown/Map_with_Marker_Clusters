@@ -28,6 +28,8 @@ export async function createDropdown(map) {
     dropdown.style.transform = 'translateX(-50%)';
     dropdown.style.zIndex = '1000';
     dropdown.style.fontWeight = 'bold';
+    dropdown.style.whiteSpace = 'nowrap';
+    dropdown.style.textOverflow = 'ellipsis';
 
     const defaultOption = document.createElement('option');
     defaultOption.value = 'default';
