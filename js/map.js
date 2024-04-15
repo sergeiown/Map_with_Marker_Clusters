@@ -82,7 +82,7 @@ export function initializeMap() {
             minZoom: 5,
             maxZoom: 17,
             attribution:
-                '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             ext: 'jpg',
         }
     );
@@ -93,16 +93,15 @@ export function initializeMap() {
             opacity: 1,
             minZoom: 5,
             maxZoom: 12,
-            attribution:
-                'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+            attribution: 'Tiles &copy; Esri &mdash; National Geographic',
         }
     );
 
     const baseLayers = {
-        'Адміністративна мапа базова': osmLayer,
-        'Адміністративна мапа альтернативна': cartoLayer,
-        'Топографічна мапа базова': topoLayer,
-        'Топографічна мапа альтернативна': TopPlusOpen_Color,
+        'Адміністративна 1': osmLayer,
+        'Адміністративна 2': cartoLayer,
+        'Топографічна 1': topoLayer,
+        'Топографічна 2': TopPlusOpen_Color,
         'Супутникова мапа': Stadia_AlidadeSatellite,
         'National Geographic': Esri_NatGeoWorldMap,
     };
