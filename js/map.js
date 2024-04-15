@@ -67,9 +67,9 @@ export function initializeMap() {
     );
 
     const baseLayers = {
+        'National Geographic': esriNatGeoWorldMap,
         Адміністративна: osmLayer,
         Топографічна: topoLayer,
-        'National Geographic': esriNatGeoWorldMap,
     };
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
@@ -86,7 +86,7 @@ export function initializeMap() {
         layerControl.getContainer().style.opacity = 0.7;
     });
 
-    osmLayer.addTo(map);
+    esriNatGeoWorldMap.addTo(map);
 
     map.zoomControl.setPosition('bottomright');
     map.zoomControl.getContainer().style.opacity = 0.7;
