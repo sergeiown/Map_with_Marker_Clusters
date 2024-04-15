@@ -32,6 +32,18 @@ export function initializeMap() {
             image.style.width = '75%';
             image.style.opacity = '0.75';
 
+            function updateContainerStyle() {
+                if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
+                    container.style.left = '19px';
+                } else {
+                    container.style.left = '';
+                }
+            }
+
+            updateContainerStyle();
+
+            window.addEventListener('resize', updateContainerStyle);
+
             container.addEventListener('click', function () {
                 map.setView([49.0, 31.0], initialZoom);
                 document.getElementById('company-dropdown').selectedIndex = 0;
@@ -77,6 +89,18 @@ export function initializeMap() {
     layerControl.getContainer().style.fontWeight = 'bold';
     layerControl.getContainer().style.fontSize = '15px';
     layerControl.getContainer().style.lineHeight = '2';
+
+    function updatelayerControlStyle() {
+        if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
+            layerControl.getContainer().style.left = '19px';
+        } else {
+            layerControl.getContainer().style.left = '';
+        }
+    }
+
+    updatelayerControlStyle();
+
+    window.addEventListener('resize', updatelayerControlStyle);
 
     layerControl.getContainer().addEventListener('mouseenter', () => {
         layerControl.getContainer().style.opacity = 1;
