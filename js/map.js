@@ -49,12 +49,13 @@ export function initializeMap() {
         maxZoom: 17,
     });
 
-    const cartoLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    const stadiaAlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
         opacity: 1,
         minZoom: 5,
         maxZoom: 17,
         attribution:
-            '&copy; <a href="https://carto.com/">Carto</a> | Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+            '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        ext: 'png',
     });
 
     const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -64,29 +65,28 @@ export function initializeMap() {
         maxZoom: 17,
     });
 
-    const TopPlusOpen_Color = L.tileLayer(
-        'http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png',
-        {
-            opacity: 1,
-            minZoom: 5,
-            maxZoom: 16,
-            attribution: 'Map data: &copy; <a href="http://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
-        }
-    );
+    const stadiaStamenTerrain = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}', {
+        opacity: 1,
+        minZoom: 5,
+        maxZoom: 17,
+        attribution:
+            '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        ext: 'png',
+    });
 
-    const Stadia_AlidadeSatellite = L.tileLayer(
+    const stadiaAlidadeSatellite = L.tileLayer(
         'https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}',
         {
             opacity: 1,
             minZoom: 5,
             maxZoom: 17,
             attribution:
-                '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             ext: 'jpg',
         }
     );
 
-    const Esri_NatGeoWorldMap = L.tileLayer(
+    const esriNatGeoWorldMap = L.tileLayer(
         'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
         {
             opacity: 1,
@@ -98,15 +98,15 @@ export function initializeMap() {
 
     const baseLayers = {
         'Адміністративна 1': osmLayer,
-        'Адміністративна 2': cartoLayer,
+        'Адміністративна 2': stadiaAlidadeSmooth,
         'Топографічна 1': topoLayer,
-        'Топографічна 2': TopPlusOpen_Color,
-        'Супутникова мапа': Stadia_AlidadeSatellite,
-        'National Geographic': Esri_NatGeoWorldMap,
+        'Топографічна 2': stadiaStamenTerrain,
+        'Супутникова мапа': stadiaAlidadeSatellite,
+        'National Geographic': esriNatGeoWorldMap,
     };
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
-    layerControl.getContainer().style.opacity = 0.8;
+    layerControl.getContainer().style.opacity = 0.7;
     layerControl.getContainer().style.fontWeight = 'bold';
     layerControl.getContainer().style.fontSize = '15px';
     layerControl.getContainer().style.lineHeight = '2';
@@ -116,7 +116,7 @@ export function initializeMap() {
     });
 
     layerControl.getContainer().addEventListener('mouseleave', () => {
-        layerControl.getContainer().style.opacity = 0.8;
+        layerControl.getContainer().style.opacity = 0.7;
     });
 
     osmLayer.addTo(map);
