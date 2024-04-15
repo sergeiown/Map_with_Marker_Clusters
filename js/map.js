@@ -49,6 +49,14 @@ export function initializeMap() {
         maxZoom: 17,
     });
 
+    const cartoLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        opacity: 1,
+        minZoom: 5,
+        maxZoom: 17,
+        attribution:
+            '&copy; <a href="https://carto.com/">Carto</a> | Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+    });
+
     const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenTopoMap contributors',
         opacity: 1,
@@ -56,9 +64,46 @@ export function initializeMap() {
         maxZoom: 17,
     });
 
+    const TopPlusOpen_Color = L.tileLayer(
+        'http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png',
+        {
+            opacity: 1,
+            minZoom: 5,
+            maxZoom: 16,
+            attribution: 'Map data: &copy; <a href="http://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
+        }
+    );
+
+    const Stadia_AlidadeSatellite = L.tileLayer(
+        'https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}',
+        {
+            opacity: 1,
+            minZoom: 5,
+            maxZoom: 17,
+            attribution:
+                '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            ext: 'jpg',
+        }
+    );
+
+    const Esri_NatGeoWorldMap = L.tileLayer(
+        'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+        {
+            opacity: 1,
+            minZoom: 5,
+            maxZoom: 12,
+            attribution:
+                'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+        }
+    );
+
     const baseLayers = {
-        Адміністративний: osmLayer,
-        Топографічний: topoLayer,
+        'Адміністративна мапа базова': osmLayer,
+        'Адміністративна мапа альтернативна': cartoLayer,
+        'Топографічна мапа базова': topoLayer,
+        'Топографічна мапа альтернативна': TopPlusOpen_Color,
+        'Супутникова мапа': Stadia_AlidadeSatellite,
+        'National Geographic': Esri_NatGeoWorldMap,
     };
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);

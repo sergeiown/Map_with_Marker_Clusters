@@ -4,10 +4,11 @@ export function addUkraineGeoJSON(map) {
         .then((data) => {
             L.geoJSON(data, {
                 style: {
-                    color: '#001f3f',
-                    weight: 2,
-                    opacity: 0.1,
-                    dashArray: '1',
+                    // color: '#001f3f',
+                    color: '#3388ff',
+                    weight: 4,
+                    opacity: 0.2,
+                    dashArray: '0',
                     fillOpacity: 0,
                 },
             }).addTo(map);
@@ -23,10 +24,10 @@ export function addUkraineBorderGeoJSON(map) {
                 style: {
                     color: '#FFD700',
                     weight: 9,
-                    opacity: 0.8,
-                    dashArray: '5',
-                    fillColor: '#3388ff',
-                    fillOpacity: 0.3,
+                    opacity: 0.7,
+                    dashArray: '5, 10',
+                    // fillColor: '#3388ff',
+                    fillOpacity: 0,
                 },
             }).addTo(map);
         })
