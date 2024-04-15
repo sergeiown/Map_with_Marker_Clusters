@@ -49,42 +49,12 @@ export function initializeMap() {
         maxZoom: 17,
     });
 
-    const stadiaAlidadeSmooth = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
-        opacity: 1,
-        minZoom: 5,
-        maxZoom: 17,
-        attribution:
-            '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        ext: 'png',
-    });
-
     const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenTopoMap contributors',
         opacity: 1,
         minZoom: 5,
         maxZoom: 17,
     });
-
-    const stadiaStamenTerrain = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}', {
-        opacity: 1,
-        minZoom: 5,
-        maxZoom: 17,
-        attribution:
-            '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        ext: 'png',
-    });
-
-    const stadiaAlidadeSatellite = L.tileLayer(
-        'https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}',
-        {
-            opacity: 1,
-            minZoom: 5,
-            maxZoom: 17,
-            attribution:
-                '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            ext: 'jpg',
-        }
-    );
 
     const esriNatGeoWorldMap = L.tileLayer(
         'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
@@ -97,11 +67,8 @@ export function initializeMap() {
     );
 
     const baseLayers = {
-        'Адміністративна 1': osmLayer,
-        'Адміністративна 2': stadiaAlidadeSmooth,
-        'Топографічна 1': topoLayer,
-        'Топографічна 2': stadiaStamenTerrain,
-        'Супутникова мапа': stadiaAlidadeSatellite,
+        Адміністративна: osmLayer,
+        Топографічна: topoLayer,
         'National Geographic': esriNatGeoWorldMap,
     };
 
