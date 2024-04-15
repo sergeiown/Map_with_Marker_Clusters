@@ -74,8 +74,9 @@ export function initializeMap() {
         }
     );
 
+    const API_TOKEN = '8a945c14-6eaa-4881-9490-28d9def7dc08';
     const Stadia_AlidadeSatellite = L.tileLayer(
-        'https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}',
+        `https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}?API_TOKEN=${API_TOKEN}`,
         {
             opacity: 1,
             minZoom: 5,
