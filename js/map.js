@@ -34,7 +34,7 @@ export function initializeMap() {
 
             function updateContainerStyle() {
                 if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
-                    container.style.left = '19px';
+                    container.style.left = '22px';
                 } else {
                     container.style.left = '';
                 }
@@ -92,7 +92,7 @@ export function initializeMap() {
 
     function updatelayerControlStyle() {
         if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
-            layerControl.getContainer().style.left = '19px';
+            layerControl.getContainer().style.left = '22px';
         } else {
             layerControl.getContainer().style.left = '';
         }
