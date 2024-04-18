@@ -18,20 +18,6 @@ export function initializeMap() {
             const image = L.DomUtil.create('img', 'center-image', container);
             image.src = './markers/default.png';
 
-            container.style.opacity = 0.8;
-            container.style.width = '44px';
-            container.style.height = '44px';
-            container.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-            container.style.border = '2px solid rgba(0, 0, 0, 0.2)';
-            container.style.borderRadius = '5px';
-            container.style.display = 'flex';
-            container.style.justifyContent = 'center';
-            container.style.alignItems = 'center';
-            container.style.cursor = 'pointer';
-
-            image.style.width = '75%';
-            image.style.opacity = '0.75';
-
             function updateContainerStyle() {
                 if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
                     container.style.left = '22px';
@@ -85,10 +71,6 @@ export function initializeMap() {
     };
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
-    layerControl.getContainer().style.opacity = 0.7;
-    layerControl.getContainer().style.fontWeight = 'bold';
-    layerControl.getContainer().style.fontSize = '15px';
-    layerControl.getContainer().style.lineHeight = '2';
 
     function updatelayerControlStyle() {
         if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
