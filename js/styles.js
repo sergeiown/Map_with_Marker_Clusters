@@ -6,7 +6,7 @@ export function addStyles() {
             html {
                 margin: 0;
                 padding: 0;
-                height: 100%; /* Встановлюємо 100% у портретному режимі для коректного відображення на iPhone*/
+                height: 100%; /* Set 100% in portrait mode for correct display on iPhone */
                 width: 100%;
             }
         }
@@ -16,7 +16,7 @@ export function addStyles() {
             html {
                 margin: 0;
                 padding: 0;
-                height: 100vh;
+                height: 100vh; /* Set 100vh in landscape mode for correct display on iPhone */
                 width: 100vw;
             }
         }
