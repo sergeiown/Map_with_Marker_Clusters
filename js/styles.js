@@ -32,15 +32,13 @@ export function addStyles() {
             width: 75%;
             opacity: 0.75;
         }
-
           
         .leaflet-control-layers {
             opacity: 0.7;
             font-weight: bold;
             font-size: 15px;
             line-height: 2;
-        }
-        `;
+        }`;
 
     document.head.appendChild(styleTag);
 }

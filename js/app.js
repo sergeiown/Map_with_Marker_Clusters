@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addUkraineBorderGeoJSON(map);
 
-    createButton();
-
     addLegend(map);
 
     createDropdown(map);
+
+    createButton();
 });
