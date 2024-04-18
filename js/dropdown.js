@@ -48,7 +48,9 @@ export async function createDropdown(map) {
 
         const selectedCompanyData = companiesData.find((company) => company.company === selectedCompany);
 
-        map.setView([selectedCompanyData.lat, selectedCompanyData.lng], 12);
+        map.flyTo([selectedCompanyData.lat, selectedCompanyData.lng], 12, {
+            duration: 2,
+        });
     });
 
     document.body.appendChild(dropdown);
