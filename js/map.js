@@ -14,6 +14,7 @@ export function initializeMap() {
         },
         onAdd: function () {
             const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
+            container.title = 'Set the default position';
 
             const image = L.DomUtil.create('img', 'center-image', container);
             image.src = './markers/default.png';
