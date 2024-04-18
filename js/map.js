@@ -8,38 +8,55 @@ export function initializeMap() {
 
     const map = L.map('map').setView([49.0, 31.0], initialZoom);
 
-    const centerButton = L.Control.extend({
-        options: {
-            position: 'topleft',
-        },
-        onAdd: function () {
-            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
-            container.title = 'Set the default position';
+    function createControlButton(options) {
+        return L.Control.extend({
+            options: options,
+            onAdd: function () {
+                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
+                container.title = options.title;
 
-            const image = L.DomUtil.create('img', 'center-image', container);
-            image.src = './markers/default.png';
+                const image = L.DomUtil.create('img', 'center-image', container);
+                image.src = options.imageSrc;
 
-            function updateContainerStyle() {
-                if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
-                    container.style.left = '22px';
-                } else {
-                    container.style.left = '';
+                function updateContainerStyle() {
+                    if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
+                        container.style.left = '22px';
+                    } else {
+                        container.style.left = '';
+                    }
                 }
-            }
 
-            updateContainerStyle();
+                updateContainerStyle();
 
-            window.addEventListener('resize', updateContainerStyle);
+                window.addEventListener('resize', updateContainerStyle);
 
-            container.addEventListener('click', function () {
-                map.flyTo([49.0, 31.0], initialZoom);
-                document.getElementById('company-dropdown').selectedIndex = 0;
-            });
+                container.addEventListener('click', options.onClick);
 
-            return container;
+                return container;
+            },
+        });
+    }
+
+    const centerButton = createControlButton({
+        position: 'topleft',
+        title: 'Set the default position',
+        imageSrc: './markers/default.png',
+        onClick: function () {
+            map.flyTo([49.0, 31.0], initialZoom);
+            document.getElementById('company-dropdown').selectedIndex = 0;
         },
     });
     map.addControl(new centerButton());
+
+    const frontButton = createControlButton({
+        position: 'bottomleft',
+        title: 'Front line map',
+        imageSrc: './markers/front.png',
+        onClick: function () {
+            window.open('https://thepage.ua/ua/karta-liniyi-frontu-v-ukrayini', '_blank');
+        },
+    });
+    map.addControl(new frontButton());
 
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
@@ -73,7 +90,7 @@ export function initializeMap() {
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
 
-    function updatelayerControlStyle() {
+    function updateLayerControlStyle() {
         if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
             layerControl.getContainer().style.left = '22px';
         } else {
@@ -81,9 +98,9 @@ export function initializeMap() {
         }
     }
 
-    updatelayerControlStyle();
+    updateLayerControlStyle();
 
-    window.addEventListener('resize', updatelayerControlStyle);
+    window.addEventListener('resize', updateLayerControlStyle);
 
     layerControl.getContainer().addEventListener('mouseenter', () => {
         layerControl.getContainer().style.opacity = 1;
