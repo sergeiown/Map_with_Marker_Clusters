@@ -1,12 +1,24 @@
 export function addStyles() {
     const styleTag = document.createElement('style');
     styleTag.innerHTML = `
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            width: 100vw;
+        @media (orientation: portrait) {
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%; /* Встановлюємо 100% у портретному режимі для коректного відображення на iPhone*/
+                width: 100%;
+            }
+        }
+        
+        @media (orientation: landscape) {
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                width: 100vw;
+            }
         }
 
         #map {
