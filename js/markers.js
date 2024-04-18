@@ -13,6 +13,11 @@ export function addMarkers(map) {
 
                 const marker = L.marker([address.lat, address.lng], { icon: customIcon });
                 marker.bindPopup(`<b>${address.company}</b><br>${address.address}<br><small>${address.info}`);
+
+                marker.on('mouseover', function (e) {
+                    this.openPopup();
+                });
+
                 markers.addLayer(marker);
             });
 
