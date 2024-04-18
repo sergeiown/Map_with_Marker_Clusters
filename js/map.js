@@ -42,7 +42,9 @@ export function initializeMap() {
         title: 'Set the default position',
         imageSrc: './markers/default.png',
         onClick: function () {
-            map.flyTo([49.0, 31.0], initialZoom);
+            map.flyTo([49.0, 31.0], initialZoom, {
+                duration: 3,
+            });
             document.getElementById('company-dropdown').selectedIndex = 0;
         },
     });
