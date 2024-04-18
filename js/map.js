@@ -65,9 +65,9 @@ export function initializeMap() {
     );
 
     const baseLayers = {
-        'National Geographic': esriNatGeoWorldMap,
         Адміністративна: osmLayer,
         Топографічна: topoLayer,
+        'National Geographic': esriNatGeoWorldMap,
     };
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
