@@ -57,10 +57,10 @@ export function initializeMap() {
     const esriNatGeoWorldMap = L.tileLayer(
         'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
         {
+            attribution: 'Tiles &copy; Esri &mdash; National Geographic',
             opacity: 1,
             minZoom: 5,
             maxZoom: 12,
-            attribution: 'Tiles &copy; Esri &mdash; National Geographic',
         }
     );
 
@@ -92,7 +92,7 @@ export function initializeMap() {
         layerControl.getContainer().style.opacity = 0.7;
     });
 
-    esriNatGeoWorldMap.addTo(map);
+    osmLayer.addTo(map);
 
     map.zoomControl.setPosition('bottomright');
     map.zoomControl.getContainer().style.opacity = 0.7;
