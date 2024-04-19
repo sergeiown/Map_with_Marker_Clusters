@@ -24,7 +24,7 @@ export function addUkraineBorderGeoJSON(map) {
                     color: '#FFD700',
                     weight: 9,
                     opacity: 0.7,
-                    dashArray: '5',
+                    dashArray: '4',
                     fillOpacity: 0,
                 },
             }).addTo(map);

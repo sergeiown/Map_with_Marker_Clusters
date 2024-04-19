@@ -65,7 +65,7 @@ export function addStyles() {
         }
 
         .leaflet-control-layers-toggle {
-            opacity: 0.8 !important;
+            opacity: 0.7 !important;
             width: 50px !important;
             height: 50px !important;
         }
@@ -100,8 +100,8 @@ export function addStyles() {
 
         .leaflet-control-zoom-in,
         .leaflet-control-zoom-out {
-            width: 50px !important;
-            opacity: 0.8 !important;
+            width: 45px !important;
+            opacity: 0.7 !important;
             padding-top: 10px;
             padding-bottom: 10px;
         }
