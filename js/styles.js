@@ -39,7 +39,7 @@ export function addStyles() {
             opacity: 0.9;
             cursor: pointer;
             border-radius: 5px;
-            border: 2px solid rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 0, 0, 0.4);
             background-color: rgba(255, 255, 255, 1);
             -webkit-text-fill-color: rgba(0, 0, 0, 0.8);
             width: 50%;
@@ -126,7 +126,7 @@ export function addStyles() {
         }
         
         .legend {
-            border: 2px solid rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(0, 0, 0, 0.4);
             border-radius: 5px;
             padding: 5px;
             background-color: rgba(255, 255, 255, 0.9);
