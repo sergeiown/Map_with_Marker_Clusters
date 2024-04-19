@@ -28,7 +28,7 @@ export function addStyles() {
         }
 
         #company-dropdown {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             cursor: pointer;
             outline: none;
             border-radius: 5px;
@@ -86,6 +86,7 @@ export function addStyles() {
         }
 
         .leaflet-control-scale-line {
+            background-color: rgba(255, 255, 255, 0.9);
             height: 20px !important;
             display: flex;
             justify-content: center;
