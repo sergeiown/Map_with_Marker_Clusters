@@ -29,8 +29,8 @@ export function addStyles() {
         
         .leaflet-bar.leaflet-control.custom-button {
             opacity: 0.8;
-            width: 44px;
-            height: 44px;
+            width: 50px;
+            height: 50px;
             background-color: rgba(255, 255, 255, 0.7);
             border: 2px solid rgba(0, 0, 0, 0.2);
             border-radius: 5px;
@@ -42,14 +42,31 @@ export function addStyles() {
           
         .center-image {
             width: 75%;
-            opacity: 0.75;
+            opacity: 0.8;
+        }
+
+        .leaflet-control-layers-toggle {
+            width: 50px !important;
+            height: 50px !important;
         }
           
         .leaflet-control-layers {
-            opacity: 0.7;
+            opacity: 0.8;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 14px;
             line-height: 2;
+        }
+        
+        .leaflet-control-zoom-in,
+        .leaflet-control-zoom-out {
+            width: 50px !important;
+            opacity: 0.8;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .leaflet-control-zoom {
+            opacity: 0.8;
         }`;
 
     document.head.appendChild(styleTag);

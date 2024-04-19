@@ -19,9 +19,14 @@ export function initializeMap() {
                 image.src = options.imageSrc;
 
                 function updateContainerStyle() {
-                    if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
+                    if (
+                        isMobile &&
+                        window.matchMedia('(orientation: landscape)').matches &&
+                        !options.title.includes('Legend')
+                    ) {
                         container.style.left = '22px';
                     } else {
+                        container.style.right = '';
                         container.style.left = '';
                     }
                 }
@@ -59,6 +64,16 @@ export function initializeMap() {
         },
     });
     map.addControl(new frontButton());
+
+    const legendButton = createControlButton({
+        position: 'topright',
+        title: 'Legend',
+        imageSrc: './markers/legend.png',
+        onClick: function () {
+            // Add your legend functionality here
+        },
+    });
+    map.addControl(new legendButton());
 
     const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
@@ -115,7 +130,6 @@ export function initializeMap() {
     osmLayer.addTo(map);
 
     map.zoomControl.setPosition('bottomright');
-    map.zoomControl.getContainer().style.opacity = 0.7;
 
     return map;
 }
