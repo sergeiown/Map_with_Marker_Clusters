@@ -26,7 +26,26 @@ export function addStyles() {
             width: 100%;
             overflow: hidden;
         }
-        
+
+        #company-dropdown {
+            background-color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            outline: none;
+            border-radius: 5px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            -webkit-text-fill-color: rgba(0, 0, 0, 0.8);
+            width: 50%;
+            height: 35px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            font-weight: bold;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
         .leaflet-bar.leaflet-control.custom-button {
             opacity: 0.8;
             width: 50px;

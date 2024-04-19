@@ -15,22 +15,6 @@ export async function createDropdown(map) {
     const dropdown = document.createElement('select');
     dropdown.id = 'company-dropdown';
 
-    dropdown.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
-    dropdown.style.cursor = 'pointer';
-    dropdown.style.borderRadius = '5px';
-    dropdown.style.border = '2px solid rgba(0, 0, 0, 0.2)';
-    dropdown.style.webkitTextFillColor = 'black';
-    dropdown.style.width = '50%';
-    dropdown.style.height = '30px';
-    dropdown.style.position = 'absolute';
-    dropdown.style.top = '10px';
-    dropdown.style.left = '50%';
-    dropdown.style.transform = 'translateX(-50%)';
-    dropdown.style.zIndex = '1000';
-    dropdown.style.fontWeight = 'bold';
-    dropdown.style.whiteSpace = 'nowrap';
-    dropdown.style.textOverflow = 'ellipsis';
-
     const defaultOption = document.createElement('option');
     defaultOption.value = 'default';
     defaultOption.text = 'Виберіть компанію з переліку:';
