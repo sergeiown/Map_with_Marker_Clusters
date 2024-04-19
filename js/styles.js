@@ -87,7 +87,11 @@ export function addStyles() {
         }
 
         .leaflet-control-scale-line {
-            opacity: 0.9 !important;
+            height: 20px !important;
+            opacity: 0.8 !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .leaflet-bottom .leaflet-control-scale {
@@ -100,7 +104,7 @@ export function addStyles() {
 
         .leaflet-control-zoom-in,
         .leaflet-control-zoom-out {
-            width: 45px !important;
+            width: 35px !important;
             opacity: 0.8 !important;
             padding-top: 10px;
             padding-bottom: 10px;
