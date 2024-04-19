@@ -67,6 +67,35 @@ export function addStyles() {
         
         .leaflet-control-zoom {
             opacity: 0.8;
+        }
+        
+        .legend {
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media screen and (orientation: landscape) {
+            .legend {
+                margin-right: 32px !important;
+            }
+        }
+        
+        .legend-title {
+            padding: 5px;
+            text-align: center;
+        }
+        
+        .legend-title h3 {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            padding: 2px;
         }`;
 
     document.head.appendChild(styleTag);
