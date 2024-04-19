@@ -68,9 +68,6 @@ export function addStyles() {
         .leaflet-control-layers-toggle {
             width: 50px !important;
             height: 50px !important;
-            background-size: 75%;
-            background-repeat: no-repeat;
-            background-position: center;
             border: 2px solid rgb(150, 150, 150);
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
