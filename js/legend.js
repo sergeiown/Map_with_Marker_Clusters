@@ -24,7 +24,7 @@ export function addLegend(map) {
                 legendData.forEach((item) => {
                     const innerDiv = document.createElement('div');
                     innerDiv.classList.add('legend-item');
-                    innerDiv.innerHTML = `<img src="./markers/${item.marker}_marker.png" style="width: 15px; height: 15px; margin-right: 5px;"> <b>${item.description}</b>`;
+                    innerDiv.innerHTML = `<img src="./markers/${item.marker}_marker.png" style="width: 20px; height: 20px; margin-right: 10px;"> <b>${item.description}</b>`;
                     div.appendChild(innerDiv);
                 });
 

@@ -31,9 +31,10 @@ export function addStyles() {
             cursor: pointer;
             border-radius: 5px;
             border: 2px solid rgb(150, 150, 150);
-            background-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.8);
             outline: none;
-            -webkit-text-fill-color: rgb(0, 0, 0);
+            color: rgb(40,40,40);
+            -webkit-text-fill-color: rgb(40, 40, 40);
             width: 50%;
             height: 35px;
             position: absolute;
@@ -45,7 +46,6 @@ export function addStyles() {
             font-size: 14px;
             white-space: nowrap;
             text-overflow: ellipsis;
-            opacity: 0.8 !important;
         }
 
         .leaflet-bar.leaflet-control.custom-button {
@@ -98,16 +98,15 @@ export function addStyles() {
         }
 
         .leaflet-control-scale-line {
-            color: rgb(0,0,0);
+            color: rgb(40,40,40);
             border: 2px solid rgb(150, 150, 150);
-            background-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
             font-weight: bolder;
             height: 20px !important;
             display: flex;
             justify-content: center;
             align-items: center;
-            opacity: 0.8 !important;
         }
 
         .leaflet-bottom .leaflet-control-scale {
@@ -133,11 +132,10 @@ export function addStyles() {
         }
         
         .legend {
-            background-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
             padding: 10px;
-            opacity: 0.8 !important;
-            color: rgb(0,0,0);
+            color: rgb(40,40,40);
         }
 
         @media screen and (orientation: landscape) {
@@ -145,7 +143,7 @@ export function addStyles() {
                 margin-right: 32px !important;
             }
         }
-        
+
         .legend-title {
             text-align: center;
             color: 2;  2   2 }
@@ -160,7 +158,8 @@ export function addStyles() {
             align-items: center;
             font-size: 14px;
             line-height: 2;
-            color: 2;  2   2 }`;
+        }
+        `;
 
     document.head.appendChild(styleTag);
 }
