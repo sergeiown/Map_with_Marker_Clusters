@@ -135,14 +135,6 @@ export function initializeMap() {
 
     window.addEventListener('resize', updateControlStyle);
 
-    layerControl.getContainer().addEventListener('mouseenter', () => {
-        layerControl.getContainer().style.opacity = 1;
-    });
-
-    layerControl.getContainer().addEventListener('mouseleave', () => {
-        layerControl.getContainer().style.opacity = 0.7;
-    });
-
     osmLayer.addTo(map);
 
     map.zoomControl.setPosition('bottomright');

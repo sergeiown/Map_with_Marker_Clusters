@@ -68,13 +68,16 @@ export function addStyles() {
         .leaflet-control-layers-toggle {
             width: 50px !important;
             height: 50px !important;
-            background-image: url(../markers/map.png);
+            background-image: url('../markers/map.png');
             background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
             border: 2px solid rgb(150, 150, 150);
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
             opacity: 0.8 !important;
         }
+        
           
         .leaflet-control-layers {
             font-weight: bold;
