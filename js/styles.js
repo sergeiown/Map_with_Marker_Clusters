@@ -1,14 +1,6 @@
 export function addStyles() {
     const styleTag = document.createElement('style');
     styleTag.innerHTML = `
-        * {
-        padding: 0;
-        margin: 0;
-        bottom: 0;
-        border: none;
-        outline: none;
-        }
-
         @media (orientation: portrait) {
             body,
             html {
@@ -36,12 +28,12 @@ export function addStyles() {
         }
 
         #company-dropdown {
-            opacity: 0.9;
             cursor: pointer;
             border-radius: 5px;
-            border: 2px solid rgba(0, 0, 0, 0.4);
-            background-color: rgba(255, 255, 255, 1);
-            -webkit-text-fill-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgb(150, 150, 150);
+            background-color: rgb(255, 255, 255);
+            outline: none;
+            -webkit-text-fill-color: rgb(0, 0, 0);
             width: 50%;
             height: 35px;
             position: absolute;
@@ -50,38 +42,49 @@ export function addStyles() {
             transform: translateX(-50%);
             z-index: 1000;
             font-weight: bold;
+            font-size: 14px;
             white-space: nowrap;
             text-overflow: ellipsis;
+            opacity: 0.9 !important;
         }
 
         .leaflet-bar.leaflet-control.custom-button {
-            opacity: 0.9;
             width: 50px;
             height: 50px;
-            background-color: rgba(255, 255, 255, 1);
-            border: 2px solid rgba(0, 0, 0, 0.2);
+            border: 2px solid rgb(150, 150, 150);
+            background-color: rgb(255, 255, 255);
             border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            opacity: 0.9 !important;
         }
           
         .center-image {
             width: 75%;
-            opacity: 0.6;
         }
 
         .leaflet-control-layers-toggle {
             width: 50px !important;
             height: 50px !important;
+            background-image: url(../markers/map.png);
+            background-size: 75%;
+            border: 2px solid rgb(150, 150, 150);
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            opacity: 0.9 !important;
         }
           
         .leaflet-control-layers {
-            opacity: 0.9 !important;
             font-weight: bold;
             font-size: 14px;
             line-height: 2;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0,0,0);
+            border-radius: 5px;
+            border: none !important;
+            opacity: 0.9 !important;
         }
 
         .leaflet-control-scale {
@@ -91,14 +94,20 @@ export function addStyles() {
             justify-content: center;
             align-items: flex-start;
             cursor: pointer;
+            border: none !important;
         }
 
         .leaflet-control-scale-line {
-            background-color: rgba(255, 255, 255, 0.9);
+            color: rgb(0,0,0);
+            border: 2px solid rgb(150, 150, 150);
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            font-weight: bolder;
             height: 20px !important;
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 0.9 !important;
         }
 
         .leaflet-bottom .leaflet-control-scale {
@@ -116,20 +125,19 @@ export function addStyles() {
             padding-bottom: 10px;
         }
 
-        .leaflet-control-zoom-in span,
-        .leaflet-control-zoom-out span {
-            color: rgba(0, 0, 0, 0.6);
-        }
-        
         .leaflet-control-zoom {
+            border: 2px solid rgb(150, 150, 150) !important;
+            background-color: rgb(255, 255, 255) !important;
+            border-radius: 5px;
             opacity: 0.9 !important;
         }
         
         .legend {
-            border: 2px solid rgba(0, 0, 0, 0.4);
+            background-color: rgb(255, 255, 255);
             border-radius: 5px;
-            padding: 5px;
-            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            opacity: 0.9 !important;
+            color: rgb(0,0,0);
         }
 
         @media screen and (orientation: landscape) {
@@ -139,22 +147,20 @@ export function addStyles() {
         }
         
         .legend-title {
-            padding: 5px;
             text-align: center;
-            opacity: 0.8;
-        }
+            color: 2;  2   2 }
         
         .legend-title h3 {
-            margin-bottom: 0;
-            margin-top: 0;
+            margin-bottom: 5px;
+            margin-top: 5px;
         }
         
         .legend-item {
             display: flex;
             align-items: center;
-            padding: 2px;
-            opacity: 0.8;
-        }`;
+            font-size: 14px;
+            line-height: 2;
+            color: 2;  2   2 }`;
 
     document.head.appendChild(styleTag);
 }
