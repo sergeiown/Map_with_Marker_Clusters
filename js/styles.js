@@ -28,7 +28,7 @@ export function addStyles() {
         }
 
         #company-dropdown {
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.8);
             cursor: pointer;
             outline: none;
             border-radius: 5px;
@@ -50,7 +50,7 @@ export function addStyles() {
             opacity: 0.8;
             width: 50px;
             height: 50px;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.8);
             border: 2px solid rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             display: flex;
@@ -61,11 +61,11 @@ export function addStyles() {
           
         .center-image {
             width: 75%;
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         .leaflet-control-layers-toggle {
-            opacity: 0.7 !important;
+            opacity: 0.8 !important;
             width: 50px !important;
             height: 50px !important;
         }
@@ -101,7 +101,7 @@ export function addStyles() {
         .leaflet-control-zoom-in,
         .leaflet-control-zoom-out {
             width: 45px !important;
-            opacity: 0.7 !important;
+            opacity: 0.8 !important;
             padding-top: 10px;
             padding-bottom: 10px;
         }
