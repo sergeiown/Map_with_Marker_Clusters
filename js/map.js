@@ -1,3 +1,5 @@
+import { addLegend } from '../js/legend.js';
+
 export function initializeMap() {
     const isMobile =
         'ontouchstart' in window ||
@@ -70,7 +72,7 @@ export function initializeMap() {
         title: 'Legend',
         imageSrc: './markers/legend.png',
         onClick: function () {
-            // Add your legend functionality here
+            addLegend(map);
         },
     });
     map.addControl(new legendButton());

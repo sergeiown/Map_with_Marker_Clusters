@@ -1,15 +1,21 @@
+let legendControl;
+
 export function addLegend(map) {
+    if (legendControl) {
+        map.removeControl(legendControl);
+    }
+
     fetch('./json/legend.json')
         .then((response) => response.json())
         .then((legendData) => {
-            const legend = L.control({ position: 'topright' });
+            legendControl = L.control({ position: 'topright' });
 
-            legend.onAdd = function () {
+            legendControl.onAdd = function () {
                 const div = L.DomUtil.create('div', 'legend');
                 div.style.border = '2px solid rgba(0, 0, 0, 0.2)';
                 div.style.borderRadius = '5px';
                 div.style.padding = '5px';
-                div.style.marginTop = '50px';
+                div.style.marginTop = '10px';
                 div.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
 
                 const legendTitle = document.createElement('div');
@@ -35,7 +41,21 @@ export function addLegend(map) {
                 return div;
             };
 
-            legend.addTo(map);
+            legendControl.addTo(map);
+
+            map.on('click', () => {
+                map.removeControl(legendControl);
+                legendControl = null;
+            });
+
+            document.addEventListener('click', (event) => {
+                const target = event.target;
+                const legendContainer = legendControl.getContainer();
+                if (!legendContainer.contains(target)) {
+                    map.removeControl(legendControl);
+                    legendControl = null;
+                }
+            });
         })
         .catch((error) => console.error('Error loading legend data:', error));
 }
