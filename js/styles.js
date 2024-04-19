@@ -46,12 +46,13 @@ export function addStyles() {
         }
 
         .leaflet-control-layers-toggle {
+            opacity: 0.8 !important;
             width: 50px !important;
             height: 50px !important;
         }
           
         .leaflet-control-layers {
-            opacity: 0.8;
+            opacity: 0.8 !important;
             font-weight: bold;
             font-size: 14px;
             line-height: 2;
@@ -60,20 +61,20 @@ export function addStyles() {
         .leaflet-control-zoom-in,
         .leaflet-control-zoom-out {
             width: 50px !important;
-            opacity: 0.8;
+            opacity: 0.8 !important;
             padding-top: 10px;
             padding-bottom: 10px;
         }
         
         .leaflet-control-zoom {
-            opacity: 0.8;
+            opacity: 0.8 !important;
         }
         
         .legend {
             border: 2px solid rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             padding: 5px;
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(255, 255, 255, 0.8);
         }
 
         @media screen and (orientation: landscape) {
@@ -85,6 +86,7 @@ export function addStyles() {
         .legend-title {
             padding: 5px;
             text-align: center;
+            opacity: 0.8;
         }
         
         .legend-title h3 {
@@ -96,6 +98,7 @@ export function addStyles() {
             display: flex;
             align-items: center;
             padding: 2px;
+            opacity: 0.8;
         }`;
 
     document.head.appendChild(styleTag);

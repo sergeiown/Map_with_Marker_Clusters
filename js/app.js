@@ -2,7 +2,6 @@ import { addStyles } from '../js/styles.js';
 import { initializeMap } from '../js/map.js';
 import { addMarkers } from './markers.js';
 import { addUkraineGeoJSON, addUkraineBorderGeoJSON } from '../js/geojson.js';
-// import { addLegend } from '../js/legend.js';
 import { createDropdown } from '../js/dropdown.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addUkraineGeoJSON(map);
 
     addUkraineBorderGeoJSON(map);
-
-    // addLegend(map);
 
     createDropdown(map);
 });
