@@ -35,7 +35,7 @@ export function addStyles() {
             outline: none;
             color: rgb(40,40,40);
             -webkit-text-fill-color: rgb(40, 40, 40);
-            width: 50%;
+            width: 40%;
             height: 35px;
             position: absolute;
             top: 10px;
