@@ -57,7 +57,28 @@ export function addStyles() {
             font-size: 14px;
             line-height: 2;
         }
-        
+
+        .leaflet-control-scale {
+            height: 50px !important;
+            width: 50px !important;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            cursor: pointer;
+        }
+
+        .leaflet-control-scale-line {
+            opacity: 0.8 !important;
+        }
+
+        .leaflet-bottom .leaflet-control-scale {
+            margin-bottom: 12px;
+        }
+
+        .leaflet-left .leaflet-control-scale {
+            margin-left: 12px;
+        }
+
         .leaflet-control-zoom-in,
         .leaflet-control-zoom-out {
             width: 50px !important;

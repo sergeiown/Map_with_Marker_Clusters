@@ -109,17 +109,31 @@ export function initializeMap() {
 
     const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
 
-    function updateLayerControlStyle() {
+    const scaleControl = L.control
+        .scale({
+            Width: 50,
+            metric: true,
+            imperial: false,
+            updateWhenIdle: false,
+            position: 'bottomleft',
+        })
+        .addTo(map);
+
+    scaleControl.getContainer().setAttribute('title', 'Map scale');
+
+    function updateControlStyle() {
         if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
             layerControl.getContainer().style.left = '22px';
+            scaleControl.getContainer().style.left = '22px';
         } else {
             layerControl.getContainer().style.left = '';
+            scaleControl.getContainer().style.left = '';
         }
     }
 
-    updateLayerControlStyle();
+    updateControlStyle();
 
-    window.addEventListener('resize', updateLayerControlStyle);
+    window.addEventListener('resize', updateControlStyle);
 
     layerControl.getContainer().addEventListener('mouseenter', () => {
         layerControl.getContainer().style.opacity = 1;
