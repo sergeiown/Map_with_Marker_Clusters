@@ -8,12 +8,17 @@ This application is designed to visualize markers on a map using the `Leaflet` l
 
 | Structure:  ||
 | --- | --- |
-| Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/72f36eea-5490-460c-afb7-4b561128e61d) |
+| Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/e4283e95-2d3e-4fef-8259-eeb4c57a688e) |
 
 | Appearance:  |||
 | --- | --- | --- |
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/47a1b607-0aa3-4782-8de7-875e1afcb0c3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4a603589-777b-4335-b456-4d29458d49e4) | ![mobile](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/aede5ee7-4ef7-4348-9469-21862e254bf8) |
-| Administrative layer                  | Topographic layer                      | Mobile view |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/7fa9ef7c-a2d3-4cd4-90b2-dfe4738caf77) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/608e1645-474b-4924-8db6-72fbc7034d18) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/7aec0145-110a-4189-8e8f-47bfcbb015cf) |
+| Administrative layer                  | Topographic layer                      | National Geographic |
+
+| Appearance (mobile version):  ||
+| --- | --- |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/f9916191-fd1d-4c1e-a234-8875793212f2) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/b091f384-7feb-43b9-b4df-e87c7718291d) |
+| Portrait | Landscape |
 
 ## Technical resources and libraries
 
