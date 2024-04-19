@@ -68,7 +68,6 @@ export function addStyles() {
         .leaflet-control-layers-toggle {
             width: 50px !important;
             height: 50px !important;
-            background-image: url('../markers/map.png');
             background-size: 75%;
             background-repeat: no-repeat;
             background-position: center;
