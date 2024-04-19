@@ -45,7 +45,7 @@ export function addStyles() {
             font-size: 14px;
             white-space: nowrap;
             text-overflow: ellipsis;
-            opacity: 0.9 !important;
+            opacity: 0.8 !important;
         }
 
         .leaflet-bar.leaflet-control.custom-button {
@@ -58,7 +58,7 @@ export function addStyles() {
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            opacity: 0.9 !important;
+            opacity: 0.8 !important;
         }
           
         .center-image {
@@ -73,7 +73,7 @@ export function addStyles() {
             border: 2px solid rgb(150, 150, 150);
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
-            opacity: 0.9 !important;
+            opacity: 0.8 !important;
         }
           
         .leaflet-control-layers {
@@ -84,7 +84,7 @@ export function addStyles() {
             color: rgb(0,0,0);
             border-radius: 5px;
             border: none !important;
-            opacity: 0.9 !important;
+            opacity: 0.8 !important;
         }
 
         .leaflet-control-scale {
@@ -107,7 +107,7 @@ export function addStyles() {
             display: flex;
             justify-content: center;
             align-items: center;
-            opacity: 0.9 !important;
+            opacity: 0.8 !important;
         }
 
         .leaflet-bottom .leaflet-control-scale {
@@ -129,14 +129,14 @@ export function addStyles() {
             border: 2px solid rgb(150, 150, 150) !important;
             background-color: rgb(255, 255, 255) !important;
             border-radius: 5px;
-            opacity: 0.9 !important;
+            opacity: 0.8 !important;
         }
         
         .legend {
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
             padding: 10px;
-            opacity: 0.9 !important;
+            opacity: 0.8 !important;
             color: rgb(0,0,0);
         }
 
