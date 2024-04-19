@@ -34,14 +34,7 @@ export function addLegend(map) {
             legendControl.addTo(map);
 
             map.on('click', () => {
-                map.removeControl(legendControl);
-                legendControl = null;
-            });
-
-            document.addEventListener('click', (event) => {
-                const target = event.target;
-                const legendContainer = legendControl.getContainer();
-                if (!legendContainer.contains(target)) {
+                if (legendControl !== null) {
                     map.removeControl(legendControl);
                     legendControl = null;
                 }

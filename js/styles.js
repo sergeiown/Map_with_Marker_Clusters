@@ -1,6 +1,14 @@
 export function addStyles() {
     const styleTag = document.createElement('style');
     styleTag.innerHTML = `
+        * {
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+        border: none;
+        outline: none;
+        }
+
         @media (orientation: portrait) {
             body,
             html {
@@ -28,11 +36,11 @@ export function addStyles() {
         }
 
         #company-dropdown {
-            background-color: rgba(255, 255, 255, 0.9);
+            opacity: 0.9;
             cursor: pointer;
-            outline: none;
             border-radius: 5px;
-            border: 2px solid rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 1);
             -webkit-text-fill-color: rgba(0, 0, 0, 0.8);
             width: 50%;
             height: 35px;
