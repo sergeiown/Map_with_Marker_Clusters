@@ -12,7 +12,7 @@
 
 | Зовнішній вигляд:  |||
 | --- | --- | --- |
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/7fa9ef7c-a2d3-4cd4-90b2-dfe4738caf77) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/608e1645-474b-4924-8db6-72fbc7034d18) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/7aec0145-110a-4189-8e8f-47bfcbb015cf) |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/19cbec1b-f3a9-49c2-8167-ae362e71c5be) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/d22a05ea-d688-4120-b6a9-3144d7487e0c) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/9d285106-ac73-48d8-819e-c2dc75c4e86a) |
 | Адміністративна мапа                  | Топографічна мапа                      | National Geographic |
 
 | Зовнішній вигляд (мобільна версія):  ||
@@ -37,7 +37,7 @@
 
 ## Конфігурація та Дані
 
-1. **Карта**: Координати та параметри карти налаштовуються у `L.map('map').setView([49.0, 31.0], 6);` у файлі `map.js`.
+1. **Мапа**: Координати та параметри карти налаштовуються у `L.map('map').setView([49.0, 31.0], 6);` у файлі `map.js`.
 2. **Маркери**: Дані про компанії завантажуються з файлу `companies.json` та використовуються для розміщення маркерів на карті. Маркери зберігаються у папці `markers`.
 3. **Кластери**: Кластеризація маркерів реалізована за допомогою `Leaflet.markercluster`.
 4. **Легенда**: Дані легенди завантажуються з файлу `legend.json`. Маркери зберігаються у папці `markers`.
@@ -45,7 +45,7 @@
 ## Додаткові Геодані
 
 1. **Області України**: Геодані для областей України завантажуються з файлу `ukraine.geojson`.
-2. **Границі України**: Геодані для границь України завантажуються з файлу `ukraine_border.geojson`.
+2. **Межі України**: Геодані для меж України завантажуються з файлу `ukraine_border.geojson`.
 
 ## Завдання для Майбутнього Розвитку
 
