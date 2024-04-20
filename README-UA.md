@@ -17,7 +17,7 @@
 
 | Зовнішній вигляд (мобільна версія):  ||
 | --- | --- |
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/f9916191-fd1d-4c1e-a234-8875793212f2) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/b091f384-7feb-43b9-b4df-e87c7718291d) |
+| ![ios-17 4](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/bd2f8c1c-f035-49f7-84bd-5ccbe3222332) | ![ios-17 4](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/d2ad3692-e56d-413a-bbec-4a441bee8170) |
 | Портретний | Альбомний |
 
 ## Технічні засоби та бібліотеки
