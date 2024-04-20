@@ -1,3 +1,5 @@
+import * as layers from '../js/layers.js';
+import { createControlButton } from '../js/buttons.js';
 import { addLegend } from '../js/legend.js';
 
 export function initializeMap() {
@@ -10,47 +12,47 @@ export function initializeMap() {
 
     const map = L.map('map').setView([49.0, 31.0], initialZoom);
 
-    function createControlButton(options) {
-        return L.Control.extend({
-            options: options,
-            onAdd: function () {
-                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
-                container.title = options.title;
+    // function createControlButton(options) {
+    //     return L.Control.extend({
+    //         options: options,
+    //         onAdd: function () {
+    //             const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
+    //             container.title = options.title;
 
-                const image = L.DomUtil.create('img', 'center-image', container);
-                image.src = options.imageSrc;
+    //             const image = L.DomUtil.create('img', 'center-image', container);
+    //             image.src = options.imageSrc;
 
-                function updateContainerStyle() {
-                    let shiftAmount = '25px';
+    //             function updateContainerStyle() {
+    //                 let shiftAmount = '25px';
 
-                    if (
-                        isMobile &&
-                        window.matchMedia('(orientation: landscape)').matches &&
-                        !options.title.includes('Legend')
-                    ) {
-                        container.style.left = shiftAmount;
-                    } else if (
-                        isMobile &&
-                        window.matchMedia('(orientation: landscape)').matches &&
-                        options.title.includes('Legend')
-                    ) {
-                        container.style.right = shiftAmount;
-                    } else {
-                        container.style.right = '';
-                        container.style.left = '';
-                    }
-                }
+    //                 if (
+    //                     isMobile &&
+    //                     window.matchMedia('(orientation: landscape)').matches &&
+    //                     !options.title.includes('Legend')
+    //                 ) {
+    //                     container.style.left = shiftAmount;
+    //                 } else if (
+    //                     isMobile &&
+    //                     window.matchMedia('(orientation: landscape)').matches &&
+    //                     options.title.includes('Legend')
+    //                 ) {
+    //                     container.style.right = shiftAmount;
+    //                 } else {
+    //                     container.style.right = '';
+    //                     container.style.left = '';
+    //                 }
+    //             }
 
-                updateContainerStyle();
+    //             updateContainerStyle();
 
-                window.addEventListener('resize', updateContainerStyle);
+    //             window.addEventListener('resize', updateContainerStyle);
 
-                container.addEventListener('click', options.onClick);
+    //             container.addEventListener('click', options.onClick);
 
-                return container;
-            },
-        });
-    }
+    //             return container;
+    //         },
+    //     });
+    // }
 
     const centerButton = createControlButton({
         position: 'topleft',
@@ -85,37 +87,7 @@ export function initializeMap() {
     });
     map.addControl(new legendButton());
 
-    const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        opacity: 1,
-        minZoom: 5,
-        maxZoom: 17,
-    });
-
-    const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenTopoMap contributors',
-        opacity: 1,
-        minZoom: 5,
-        maxZoom: 17,
-    });
-
-    const esriNatGeoWorldMap = L.tileLayer(
-        'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
-        {
-            attribution: 'Tiles &copy; Esri &mdash; National Geographic',
-            opacity: 1,
-            minZoom: 5,
-            maxZoom: 12,
-        }
-    );
-
-    const baseLayers = {
-        Адміністративна: osmLayer,
-        Топографічна: topoLayer,
-        'National Geographic': esriNatGeoWorldMap,
-    };
-
-    const layerControl = L.control.layers(baseLayers, null, { position: 'topleft' }).addTo(map);
+    const layerControl = L.control.layers(layers.baseLayers, null, { position: 'topleft' }).addTo(map);
 
     const scaleControl = L.control
         .scale({
@@ -152,7 +124,7 @@ export function initializeMap() {
 
     window.addEventListener('resize', updateControlStyle);
 
-    osmLayer.addTo(map);
+    layers.osmLayer.addTo(map);
 
     return map;
 }
