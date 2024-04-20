@@ -137,15 +137,9 @@ export function addStyles() {
             color: rgb(40,40,40);
         }
 
-        @media screen and (orientation: landscape) {
-            .legend {
-                margin-right: 32px !important;
-            }
-        }
-
         .legend-title {
             text-align: center;
-            color: 2;  2   2 }
+        }
         
         .legend-title h3 {
             margin-bottom: 5px;

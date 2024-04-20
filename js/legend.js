@@ -1,9 +1,18 @@
 let legendControl;
 
+const isMobile =
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints > 0 ||
+    (window.matchMedia('(max-width: 600px)').matches && window.matchMedia('(orientation: portrait)').matches);
+
 export function addLegend(map) {
     if (legendControl) {
         map.removeControl(legendControl);
     }
+
+    document.querySelectorAll('.leaflet-bar.leaflet-control.custom-button[title*="Legend"]').forEach((button) => {
+        button.style.display = 'none';
+    });
 
     fetch('./json/legend.json')
         .then((response) => response.json())
@@ -37,8 +46,37 @@ export function addLegend(map) {
                 if (legendControl !== null) {
                     map.removeControl(legendControl);
                     legendControl = null;
+
+                    document
+                        .querySelectorAll('.leaflet-bar.leaflet-control.custom-button[title*="Legend"]')
+                        .forEach((button) => {
+                            button.style.display = 'flex';
+                        });
                 }
             });
+            function updateLegendStyle() {
+                let shiftAmountRight = '25px';
+                let shiftAmountTop = '45px';
+
+                const legendContainer = legendControl.getContainer();
+
+                if (isMobile && window.matchMedia('(orientation: landscape)').matches && legendControl) {
+                    legendContainer.style.right = shiftAmountRight;
+                    legendContainer.style.top = '';
+                } else if (isMobile && window.matchMedia('(orientation: portrait)').matches && legendControl) {
+                    legendContainer.style.right = '';
+                    legendContainer.style.top = shiftAmountTop;
+                } else {
+                    legendContainer.style.right = '';
+                    legendContainer.style.left = '';
+                    legendContainer.style.top = '';
+                    legendContainer.style.bottom = '';
+                }
+            }
+
+            updateLegendStyle();
+
+            window.addEventListener('resize', updateLegendStyle);
         })
         .catch((error) => console.error('Error loading legend data:', error));
 }

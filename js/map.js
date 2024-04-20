@@ -21,18 +21,20 @@ export function initializeMap() {
                 image.src = options.imageSrc;
 
                 function updateContainerStyle() {
+                    let shiftAmount = '25px';
+
                     if (
                         isMobile &&
                         window.matchMedia('(orientation: landscape)').matches &&
                         !options.title.includes('Legend')
                     ) {
-                        container.style.left = '23px';
+                        container.style.left = shiftAmount;
                     } else if (
                         isMobile &&
                         window.matchMedia('(orientation: landscape)').matches &&
                         options.title.includes('Legend')
                     ) {
-                        container.style.right = '23px';
+                        container.style.right = shiftAmount;
                     } else {
                         container.style.right = '';
                         container.style.left = '';
@@ -130,14 +132,19 @@ export function initializeMap() {
     map.zoomControl.setPosition('bottomright');
 
     function updateControlStyle() {
+        let shiftAmount = '25px';
+        let shiftAmountAttribution = '35px';
+
         if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
-            layerControl.getContainer().style.left = '23px';
-            scaleControl.getContainer().style.left = '23px';
-            map.zoomControl.getContainer().style.right = '23px';
+            layerControl.getContainer().style.left = shiftAmount;
+            scaleControl.getContainer().style.left = shiftAmount;
+            map.zoomControl.getContainer().style.right = shiftAmount;
+            document.querySelector('.leaflet-control-attribution').style.right = shiftAmountAttribution;
         } else {
             layerControl.getContainer().style.left = '';
             scaleControl.getContainer().style.left = '';
             map.zoomControl.getContainer().style.right = '';
+            document.querySelector('.leaflet-control-attribution').style.right = '';
         }
     }
 
