@@ -1,15 +1,17 @@
-export const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+export const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.{ext}', {
     attribution: '© OpenStreetMap contributors',
     opacity: 1,
     minZoom: 5,
     maxZoom: 17,
+    ext: 'png',
 });
 
-export const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+export const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.{ext}', {
     attribution: '© OpenTopoMap contributors',
     opacity: 1,
     minZoom: 5,
     maxZoom: 17,
+    ext: 'png',
 });
 
 export const esriNatGeoWorldMap = L.tileLayer(
