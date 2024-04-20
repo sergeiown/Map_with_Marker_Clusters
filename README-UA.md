@@ -8,7 +8,7 @@
 
 | Структура:  ||
 | --- | --- |
-| Залежності | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/e4283e95-2d3e-4fef-8259-eeb4c57a688e) |
+| Залежності | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/ebd9a2e0-3320-4f11-bde7-d4be272f35fb) |
 
 | Зовнішній вигляд:  |||
 | --- | --- | --- |
