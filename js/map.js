@@ -26,7 +26,13 @@ export function initializeMap() {
                         window.matchMedia('(orientation: landscape)').matches &&
                         !options.title.includes('Legend')
                     ) {
-                        container.style.left = '22px';
+                        container.style.left = '23px';
+                    } else if (
+                        isMobile &&
+                        window.matchMedia('(orientation: landscape)').matches &&
+                        options.title.includes('Legend')
+                    ) {
+                        container.style.right = '23px';
                     } else {
                         container.style.right = '';
                         container.style.left = '';
@@ -121,13 +127,17 @@ export function initializeMap() {
 
     scaleControl.getContainer().setAttribute('title', 'Map scale');
 
+    map.zoomControl.setPosition('bottomright');
+
     function updateControlStyle() {
         if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
-            layerControl.getContainer().style.left = '22px';
-            scaleControl.getContainer().style.left = '22px';
+            layerControl.getContainer().style.left = '23px';
+            scaleControl.getContainer().style.left = '23px';
+            map.zoomControl.getContainer().style.right = '23px';
         } else {
             layerControl.getContainer().style.left = '';
             scaleControl.getContainer().style.left = '';
+            map.zoomControl.getContainer().style.right = '';
         }
     }
 
@@ -136,8 +146,6 @@ export function initializeMap() {
     window.addEventListener('resize', updateControlStyle);
 
     osmLayer.addTo(map);
-
-    map.zoomControl.setPosition('bottomright');
 
     return map;
 }
