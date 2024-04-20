@@ -1,58 +1,12 @@
 import * as layers from '../js/layers.js';
+import { isMobile } from '../js/mobileDetector.js';
 import { createControlButton } from '../js/buttons.js';
 import { addLegend } from '../js/legend.js';
 
 export function initializeMap() {
-    const isMobile =
-        'ontouchstart' in window ||
-        navigator.maxTouchPoints > 0 ||
-        (window.matchMedia('(max-width: 600px)').matches && window.matchMedia('(orientation: portrait)').matches);
-
     const initialZoom = isMobile ? 5 : 6;
 
     const map = L.map('map').setView([49.0, 31.0], initialZoom);
-
-    // function createControlButton(options) {
-    //     return L.Control.extend({
-    //         options: options,
-    //         onAdd: function () {
-    //             const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
-    //             container.title = options.title;
-
-    //             const image = L.DomUtil.create('img', 'center-image', container);
-    //             image.src = options.imageSrc;
-
-    //             function updateContainerStyle() {
-    //                 let shiftAmount = '25px';
-
-    //                 if (
-    //                     isMobile &&
-    //                     window.matchMedia('(orientation: landscape)').matches &&
-    //                     !options.title.includes('Legend')
-    //                 ) {
-    //                     container.style.left = shiftAmount;
-    //                 } else if (
-    //                     isMobile &&
-    //                     window.matchMedia('(orientation: landscape)').matches &&
-    //                     options.title.includes('Legend')
-    //                 ) {
-    //                     container.style.right = shiftAmount;
-    //                 } else {
-    //                     container.style.right = '';
-    //                     container.style.left = '';
-    //                 }
-    //             }
-
-    //             updateContainerStyle();
-
-    //             window.addEventListener('resize', updateContainerStyle);
-
-    //             container.addEventListener('click', options.onClick);
-
-    //             return container;
-    //         },
-    //     });
-    // }
 
     const centerButton = createControlButton({
         position: 'topleft',

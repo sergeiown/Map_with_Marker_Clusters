@@ -1,7 +1,4 @@
-const isMobile =
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints > 0 ||
-    (window.matchMedia('(max-width: 600px)').matches && window.matchMedia('(orientation: portrait)').matches);
+import { isMobile } from '../js/mobileDetector.js';
 
 export function createControlButton(options) {
     return L.Control.extend({

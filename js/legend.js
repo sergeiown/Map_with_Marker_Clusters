@@ -1,9 +1,6 @@
-let legendControl;
+import { isMobile } from '../js/mobileDetector.js';
 
-const isMobile =
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints > 0 ||
-    (window.matchMedia('(max-width: 600px)').matches && window.matchMedia('(orientation: portrait)').matches);
+let legendControl;
 
 export function addLegend(map) {
     if (legendControl) {
