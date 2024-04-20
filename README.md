@@ -12,7 +12,7 @@ This application is designed to visualize markers on a map using the `Leaflet` l
 
 | Appearance:  |||
 | --- | --- | --- |
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/7fa9ef7c-a2d3-4cd4-90b2-dfe4738caf77) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/608e1645-474b-4924-8db6-72fbc7034d18) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/7aec0145-110a-4189-8e8f-47bfcbb015cf) |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/19cbec1b-f3a9-49c2-8167-ae362e71c5be) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/d22a05ea-d688-4120-b6a9-3144d7487e0c) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/9d285106-ac73-48d8-819e-c2dc75c4e86a) |
 | Administrative layer                  | Topographic layer                      | National Geographic |
 
 | Appearance (mobile version):  ||
