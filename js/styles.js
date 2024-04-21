@@ -87,7 +87,6 @@ export function addStyles() {
     
     .leaflet-control-scale {
         height: 50px !important;
-        width: 50px !important;
         display: flex;
         justify-content: center;
         align-items: flex-start;
