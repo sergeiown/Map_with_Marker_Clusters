@@ -96,8 +96,8 @@ export function initializeMap() {
 
     layers.osmLayer.addTo(map);
 
-    map.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
+    document.addEventListener('contextmenu', function (event) {
+        event.preventDefault();
     });
 
     return map;
