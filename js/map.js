@@ -100,5 +100,21 @@ export function initializeMap() {
         event.preventDefault();
     });
 
+    function gradualOpacityAnimation() {
+        const targetOpacity = 1;
+        const opacityStep = 0.05;
+        const currentOpacity = parseFloat(map.getPane('mapPane').style.opacity);
+
+        if (currentOpacity < targetOpacity) {
+            const newOpacity = Math.min(currentOpacity + opacityStep, targetOpacity);
+            map.getPane('mapPane').style.opacity = newOpacity;
+            setTimeout(gradualOpacityAnimation, 100);
+        }
+    }
+
+    map.getPane('mapPane').style.opacity = 0;
+
+    gradualOpacityAnimation();
+
     return map;
 }
