@@ -80,5 +80,9 @@ export function initializeMap() {
 
     layers.osmLayer.addTo(map);
 
+    map.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
     return map;
 }
