@@ -26,7 +26,23 @@ export function initializeMap() {
         title: 'Front line map',
         imageSrc: './markers/front.png',
         onClick: function () {
-            window.open('https://deepstatemap.live/#6/49.1/31.2', '_blank');
+            const popupWidth = window.innerWidth * 0.9;
+            const popupHeight = window.innerHeight * 0.9;
+            const leftPosition = (window.innerWidth - popupWidth) / 2;
+            const topPosition = (window.innerHeight - popupHeight) / 2;
+            const popupWindow = window.open(
+                'https://deepstatemap.live/#6/49.1/31.2',
+                '_blank',
+                `width=${popupWidth}, height=${popupHeight}, left=${leftPosition}, top=${topPosition}`
+            );
+
+            if (popupWindow) {
+                window.addEventListener('beforeunload', function () {
+                    popupWindow.close();
+                });
+            } else {
+                console.error('Could not open the frame.');
+            }
         },
     });
     map.addControl(new frontButton());
