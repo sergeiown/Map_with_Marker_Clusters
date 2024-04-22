@@ -1,3 +1,6 @@
+/* Copyright (c) 2023-2024 Serhii I. Myshko
+https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
+
 export function addMarkers(map) {
     const markers = L.markerClusterGroup();
 

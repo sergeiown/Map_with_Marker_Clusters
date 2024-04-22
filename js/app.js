@@ -1,3 +1,6 @@
+/* Copyright (c) 2023-2024 Serhii I. Myshko
+https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
+
 import { addStyles } from '../js/styles.js';
 import { initializeMap } from '../js/map.js';
 import { addMarkers } from './markers.js';

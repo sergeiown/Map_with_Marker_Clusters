@@ -1,3 +1,6 @@
+/* Copyright (c) 2023-2024 Serhii I. Myshko
+https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
+
 import * as layers from '../js/layers.js';
 import { isMobile } from '../js/mobileDetector.js';
 import { createControlButton } from '../js/buttons.js';
