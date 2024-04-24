@@ -4,7 +4,7 @@
 
 ## Overview
 
-This application is designed to visualize markers on a map using the `Leaflet` library and group them using`Leaflet.markercluster`. The application is designed to display the location of companies on the map with the ability to group markers into clusters.
+This application is designed to visualize markers on the map using the `Leaflet` library and group them using `Leaflet.markercluster`. The application is designed to display the location of companies on the map with the ability to group markers into clusters. Various options for displaying map layers and additional options are available.
 
 | Structure:  ||
 | --- | --- |
