@@ -18,7 +18,7 @@ export const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{
 });
 
 export const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
-    attribution: '&copy; <a href="https://www.google.com/maps/">Google Maps</a>',
+    attribution: '&copy; Google Maps',
     opacity: 1,
     minZoom: 5,
     maxZoom: 20,
@@ -38,7 +38,7 @@ export const esriNatGeoWorldMap = L.tileLayer(
 export const esriWorldStreetMap = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
     {
-        attribution: 'Tiles &copy; Esri &mdash',
+        attribution: 'Tiles &copy; Esri',
         opacity: 1,
         minZoom: 5,
         maxZoom: 19,
