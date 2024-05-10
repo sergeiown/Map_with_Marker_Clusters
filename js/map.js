@@ -5,6 +5,7 @@ import * as layers from '../js/layers.js';
 import { isMobile } from '../js/mobileDetector.js';
 import { createControlButton } from '../js/buttons.js';
 import { addLegend } from '../js/legend.js';
+import { updateControlStyle, updateLayer, gradualOpacityAnimation } from '../js/mapUtils.js';
 
 export function initializeMap() {
     const initialZoom = isMobile ? 5 : 6;
@@ -60,7 +61,8 @@ export function initializeMap() {
     });
     map.addControl(new legendButton());
 
-    const layerControl = L.control.layers(layers.baseLayers, null, { position: 'topleft' }).addTo(map);
+    const layerControl = L.control.layers(layers.baseLayers, null, { position: 'topleft' });
+    layerControl.addTo(map);
 
     const scaleControl = L.control
         .scale({
@@ -76,62 +78,17 @@ export function initializeMap() {
 
     map.zoomControl.setPosition('bottomright');
 
-    function updateControlStyle() {
-        let shiftAmount = '25px';
-        let shiftAmountAttribution = '35px';
+    updateLayer(map);
 
-        if (isMobile && window.matchMedia('(orientation: landscape)').matches) {
-            layerControl.getContainer().style.left = shiftAmount;
-            scaleControl.getContainer().style.left = shiftAmount;
-            map.zoomControl.getContainer().style.right = shiftAmount;
-            document.querySelector('.leaflet-control-attribution').style.right = shiftAmountAttribution;
-        } else {
-            layerControl.getContainer().style.left = '';
-            scaleControl.getContainer().style.left = '';
-            map.zoomControl.getContainer().style.right = '';
-            document.querySelector('.leaflet-control-attribution').style.right = '';
-        }
-    }
+    map.getPane('mapPane').style.opacity = 0;
+    gradualOpacityAnimation(map);
 
-    updateControlStyle();
-
-    window.addEventListener('resize', updateControlStyle);
-
-    function updateLayer() {
-        const selectedLayer = localStorage.getItem('selectedLayer');
-
-        if (selectedLayer && layers.baseLayers[selectedLayer]) {
-            layers.baseLayers[selectedLayer].addTo(map);
-        } else {
-            layers.osmLayer.addTo(map);
-        }
-
-        map.on('baselayerchange', function (event) {
-            localStorage.setItem('selectedLayer', event.name);
-        });
-    }
-
-    updateLayer();
+    updateControlStyle(map);
+    window.addEventListener('resize', () => updateControlStyle(map));
 
     document.addEventListener('contextmenu', function (event) {
         event.preventDefault();
     });
-
-    function gradualOpacityAnimation() {
-        const targetOpacity = 1;
-        const opacityStep = 0.05;
-        const currentOpacity = parseFloat(map.getPane('mapPane').style.opacity);
-
-        if (currentOpacity < targetOpacity) {
-            const newOpacity = Math.min(currentOpacity + opacityStep, targetOpacity);
-            map.getPane('mapPane').style.opacity = newOpacity;
-            setTimeout(gradualOpacityAnimation, 100);
-        }
-    }
-
-    map.getPane('mapPane').style.opacity = 0;
-
-    gradualOpacityAnimation();
 
     return map;
 }
