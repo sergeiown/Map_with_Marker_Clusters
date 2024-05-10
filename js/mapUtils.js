@@ -46,3 +46,11 @@ export function gradualOpacityAnimation(map) {
         setTimeout(() => gradualOpacityAnimation(map), 100);
     }
 }
+
+export function clearUnnecessaryWarnings(map) {
+    map.on('moveend', function () {
+        if (map.hasLayer(layers.baseLayers['Google Sat Map'])) {
+            console.clear();
+        }
+    });
+}
