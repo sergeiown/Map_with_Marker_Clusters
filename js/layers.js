@@ -59,7 +59,7 @@ export const baseLayers = {
     'Open Street Map': osmLayer,
     'Open Topo Map': topoLayer,
     'Esri World Street': esriWorldStreetMap,
-    'Esri NatGeo Map': esriNatGeoWorldMap,
+    // 'Esri NatGeo Map': esriNatGeoWorldMap,
     'Visicom Base': visicomLayer,
     'Google Sat Map': googleSat,
 };
