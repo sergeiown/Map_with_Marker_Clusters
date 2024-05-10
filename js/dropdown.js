@@ -35,7 +35,7 @@ export async function createDropdown(map) {
 
         const selectedCompanyData = companiesData.find((company) => company.company === selectedCompany);
 
-        map.flyTo([selectedCompanyData.lat, selectedCompanyData.lng], 12, {
+        map.flyTo([selectedCompanyData.lat, selectedCompanyData.lng], 15, {
             duration: 4,
         });
     });

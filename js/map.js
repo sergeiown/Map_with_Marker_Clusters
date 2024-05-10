@@ -97,7 +97,7 @@ export function initializeMap() {
 
     window.addEventListener('resize', updateControlStyle);
 
-    layers.visicomLayer.addTo(map);
+    layers.osmLayer.addTo(map);
 
     document.addEventListener('contextmenu', function (event) {
         event.preventDefault();
