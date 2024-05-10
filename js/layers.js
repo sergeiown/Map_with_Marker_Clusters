@@ -47,7 +47,7 @@ export const visicomLayer = L.tileLayer('https://tms{s}.visicom.ua/2.0.0/planet3
     ext: 'png',
 });
 
-export const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+export const googleSat = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
     attribution: '&copy; Google Maps',
     opacity: 1,
     minZoom: 5,
