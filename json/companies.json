@@ -1,42 +1,66 @@
 [
     {
-        "lat": 50.45262450814744,
-        "lng": 30.05448966851916,
-        "company": "GeekCode",
+        "lat": 50.45090527867344,
+        "lng": 30.521412882155204,
+        "company": "Geek Code",
         "address": "Somewhere in Ukraine",
         "info": "Tech solutions for the future",
         "marker": "blue"
     },
     {
-        "lat": 48.5528485362611,
-        "lng": 30.594128068567382,
-        "company": "ByteCrafters",
+        "lat": 50.39798439220319,
+        "lng": 30.6342321059475,
+        "company": "Byte Crafters",
         "address": "Somewhere in Ukraine",
         "info": "Innovating IT landscapes",
         "marker": "red"
     },
     {
-        "lat": 48.08062773642931,
-        "lng": 34.427010455053086,
-        "company": "CyberNauts",
+        "lat": 50.454785925459,
+        "lng": 30.35632210606147,
+        "company": "IT mindset",
+        "address": "Somewhere in Ukraine",
+        "info": "Development and improvement",
+        "marker": "green"
+    },
+    {
+        "lat": 49.58879379529434,
+        "lng": 34.553311010136014,
+        "company": "Cyber Nauts",
         "address": "Somewhere in Ukraine",
         "info": "Navigating the digital world",
         "marker": "pink"
     },
     {
-        "lat": 47.531958627268146,
-        "lng": 33.045271639687094,
-        "company": "DataWizards",
+        "lat": 46.966973478544574,
+        "lng": 32.004143900863355,
+        "company": "Data Wizards",
         "address": "Somewhere in Ukraine",
         "info": "Unleashing the power of data",
         "marker": "orange"
     },
     {
-        "lat": 47.08062773642931,
-        "lng": 32.427010455053086,
-        "company": "InnoHub",
+        "lat": 49.4186548962826,
+        "lng": 26.97717159437349,
+        "company": "Inno Hub",
         "address": "Somewhere in Ukraine",
         "info": "Fueling creativity in IT",
         "marker": "green"
+    },
+    {
+        "lat": 49.844679061164385,
+        "lng": 24.025990393012652,
+        "company": "Cyber Hub",
+        "address": "Somewhere in Ukraine",
+        "info": "Navigating IT",
+        "marker": "blue"
+    },
+    {
+        "lat": 49.54129501243554,
+        "lng": 34.501043826369646,
+        "company": "Data Crafters",
+        "address": "Somewhere in Ukraine",
+        "info": "IT solutions",
+        "marker": "red"
     }
 ]
