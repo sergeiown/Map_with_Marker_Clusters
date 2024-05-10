@@ -55,22 +55,24 @@ export function addLegend(map) {
                 }
             });
             function updateLegendStyle() {
-                let shiftAmountRight = '25px';
-                let shiftAmountTop = '45px';
+                if (legendControl !== null) {
+                    let shiftAmountRight = '25px';
+                    let shiftAmountTop = '45px';
 
-                const legendContainer = legendControl.getContainer();
+                    const legendContainer = legendControl.getContainer();
 
-                if (isMobile && window.matchMedia('(orientation: landscape)').matches && legendControl) {
-                    legendContainer.style.right = shiftAmountRight;
-                    legendContainer.style.top = '';
-                } else if (isMobile && window.matchMedia('(orientation: portrait)').matches && legendControl) {
-                    legendContainer.style.right = '';
-                    legendContainer.style.top = shiftAmountTop;
-                } else {
-                    legendContainer.style.right = '';
-                    legendContainer.style.left = '';
-                    legendContainer.style.top = '';
-                    legendContainer.style.bottom = '';
+                    if (isMobile && window.matchMedia('(orientation: landscape)').matches && legendControl) {
+                        legendContainer.style.right = shiftAmountRight;
+                        legendContainer.style.top = '';
+                    } else if (isMobile && window.matchMedia('(orientation: portrait)').matches && legendControl) {
+                        legendContainer.style.right = '';
+                        legendContainer.style.top = shiftAmountTop;
+                    } else {
+                        legendContainer.style.right = '';
+                        legendContainer.style.left = '';
+                        legendContainer.style.top = '';
+                        legendContainer.style.bottom = '';
+                    }
                 }
             }
 
