@@ -27,15 +27,15 @@ export const esriWorldStreetMap = L.tileLayer(
     }
 );
 
-export const esriNatGeoWorldMap = L.tileLayer(
-    'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
-    {
-        attribution: 'Tiles &copy; Esri &mdash; National Geographic',
-        opacity: 1,
-        minZoom: 5,
-        maxZoom: 12,
-    }
-);
+// export const esriNatGeoWorldMap = L.tileLayer(
+//     'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+//     {
+//         attribution: 'Tiles &copy; Esri &mdash; National Geographic',
+//         opacity: 1,
+//         minZoom: 5,
+//         maxZoom: 12,
+//     }
+// );
 
 export const visicomLayer = L.tileLayer('https://tms{s}.visicom.ua/2.0.0/planet3/base_uk/{z}/{x}/{y}.{ext}', {
     attribution: '© «<a href="https://api.visicom.ua/">Visicom</a>»',
