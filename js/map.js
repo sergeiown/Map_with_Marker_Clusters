@@ -5,7 +5,7 @@ import * as layers from '../js/layers.js';
 import { isMobile } from '../js/mobileDetector.js';
 import { createControlButton } from '../js/buttons.js';
 import { addLegend } from '../js/legend.js';
-import { updateControlStyle, updateLayer, gradualOpacityAnimation, clearUnnecessaryWarnings } from '../js/mapUtils.js';
+import { updateControlStyle, updateLayer, gradualOpacityAnimation } from '../js/mapUtils.js';
 
 export function initializeMap() {
     const initialZoom = isMobile ? 5 : 6;
@@ -89,8 +89,6 @@ export function initializeMap() {
     document.addEventListener('contextmenu', function (event) {
         event.preventDefault();
     });
-
-    clearUnnecessaryWarnings(map);
 
     return map;
 }

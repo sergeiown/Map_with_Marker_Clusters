@@ -33,6 +33,12 @@ export function updateLayer(map) {
     map.on('baselayerchange', function (event) {
         localStorage.setItem('selectedLayer', event.name);
     });
+
+    map.on('moveend', function () {
+        if (map.hasLayer(layers.baseLayers['Google Sat Map'])) {
+            console.clear();
+        }
+    });
 }
 
 export function gradualOpacityAnimation(map) {
@@ -45,12 +51,4 @@ export function gradualOpacityAnimation(map) {
         map.getPane('mapPane').style.opacity = newOpacity;
         setTimeout(() => gradualOpacityAnimation(map), 100);
     }
-}
-
-export function clearUnnecessaryWarnings(map) {
-    map.on('moveend', function () {
-        if (map.hasLayer(layers.baseLayers['Google Sat Map'])) {
-            console.clear();
-        }
-    });
 }
