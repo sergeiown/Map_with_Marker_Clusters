@@ -1,6 +1,16 @@
 /* Copyright (c) 2023-2024 Serhii I. Myshko
 https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
 
+export const visicomLayer = L.tileLayer('https://tms{s}.visicom.ua/2.0.0/planet3/base_uk/{z}/{x}/{y}.{ext}', {
+    attribution: '© «<a href="https://api.visicom.ua/">Visicom</a>»',
+    subdomains: '123',
+    tms: true,
+    opacity: 1,
+    minZoom: 5,
+    maxZoom: 19,
+    ext: 'png',
+});
+
 export const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.{ext}', {
     attribution: '© OpenStreetMap contributors',
     opacity: 1,
@@ -46,9 +56,10 @@ export const esriWorldStreetMap = L.tileLayer(
 );
 
 export const baseLayers = {
-    'Адміністративна мапа': osmLayer,
-    'Адмін. альтернативна': esriWorldStreetMap,
-    'Топографічна мапа': topoLayer,
-    'Супутникова мапа': googleSat,
-    'National Geographic': esriNatGeoWorldMap,
+    'Visicom Base UK': visicomLayer,
+    'Open Street Map': osmLayer,
+    'Open Topo Map': topoLayer,
+    'Esri World Street': esriWorldStreetMap,
+    'Esri NatGeo Map': esriNatGeoWorldMap,
+    'Google Sat Map': googleSat,
 };
