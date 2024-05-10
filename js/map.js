@@ -29,7 +29,7 @@ export function initializeMap() {
         title: 'Front line map',
         imageSrc: './markers/front.png',
         onClick: function () {
-            const popupWidth = window.innerWidth * 0.9;
+            const popupWidth = window.innerWidth * 0.8;
             const popupHeight = window.innerHeight * 0.9;
             const leftPosition = (window.innerWidth - popupWidth) / 2;
             const topPosition = (window.innerHeight - popupHeight) / 2;
