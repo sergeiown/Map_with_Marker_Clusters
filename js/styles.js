@@ -155,8 +155,7 @@ export function addStyles() {
         line-height: 2;
     }
 
-    .custom-icon,
-    .leaflet-marker-icon.marker-cluster.marker-cluster-small {
+    .leaflet-marker-icon {
         filter: drop-shadow(4px 12px 6px rgba(0,0,0,0.5));
     }
     `;
