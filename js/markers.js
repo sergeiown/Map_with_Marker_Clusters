@@ -1,21 +1,12 @@
 /* Copyright (c) 2023-2024 Serhii I. Myshko
 https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
 
-async function loadCompanyAddresses() {
-    try {
-        const response = await fetch('./json/companies.json');
-        const addresses = await response.json();
-        return addresses;
-    } catch (error) {
-        console.error('Error loading addresses:', error);
-        return [];
-    }
-}
+import { getCompaniesData } from '../js/companiesData.js';
 
-function createMarkers(map, addresses) {
+function createMarkers(map, data) {
     const markers = L.markerClusterGroup();
 
-    addresses.forEach((address, index) => {
+    data.forEach((address, index) => {
         const customIcon = L.icon({
             iconUrl: `./markers/${address.marker}_marker.png`,
             iconSize: [38, 38],
@@ -63,7 +54,7 @@ function createMarkers(map, addresses) {
             );
         }
 
-        const delay = (2000 / addresses.length) * index;
+        const delay = (2000 / data.length) * index;
 
         setTimeout(() => {
             markers.addLayer(marker);
@@ -74,7 +65,7 @@ function createMarkers(map, addresses) {
 
 export async function addMarkers(map) {
     setTimeout(async () => {
-        const addresses = await loadCompanyAddresses();
-        createMarkers(map, addresses);
+        const data = await getCompaniesData();
+        createMarkers(map, data);
     }, 2000);
 }
