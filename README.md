@@ -8,7 +8,7 @@ This application is designed to visualize markers on the map using the `Leaflet`
 
 | Structure:  ||
 | --- | --- |
-| Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/5017853b-8398-487d-81cc-7ccc94b919ab) |
+| Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/060530af-22c9-4cc7-bf1d-4416262fd9d6) |
 
 | Appearance:  ||
 | --- | --- | 
