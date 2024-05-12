@@ -10,10 +10,10 @@
 | --- | --- |
 | Залежності | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/19fee497-c54e-4015-ac34-a90678633937) |
 
-| Зовнішній вигляд:  |||
-| --- | --- | --- |
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/19cbec1b-f3a9-49c2-8167-ae362e71c5be) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/d22a05ea-d688-4120-b6a9-3144d7487e0c) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/9d285106-ac73-48d8-819e-c2dc75c4e86a) |
-| Адміністративна мапа                  | Топографічна мапа                      | National Geographic |
+| Зовнішній вигляд:  ||
+| --- | --- |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4f9fe4f3-4ced-418b-8502-aa8558c9e048) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/8b8f3e2e-32ec-4baa-8391-def278b63bd3) |
+| Адміністративна мапа                  | Топографічна мапа                      |
 
 | Зовнішній вигляд (мобільна версія):  ||
 | --- | --- |
