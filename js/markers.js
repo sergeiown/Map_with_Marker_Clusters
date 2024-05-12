@@ -12,6 +12,7 @@ export function addMarkers(map) {
                     iconUrl: `./markers/${address.marker}_marker.png`,
                     iconSize: [38, 38],
                     iconAnchor: [15, 42],
+                    className: 'custom-icon',
                 });
 
                 const marker = L.marker([address.lat, address.lng], { icon: customIcon });
@@ -60,5 +61,5 @@ export function addMarkers(map) {
 
             map.addLayer(markers);
         })
-        .catch((error) => console.error('Помилка при завантаженні адрес:', error));
+        .catch((error) => console.error('Error loading addresses:', error));
 }
