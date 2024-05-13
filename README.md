@@ -22,15 +22,15 @@ This application is designed to visualize markers on the map using the `Leaflet`
 
 ## Technical resources and libraries
 
+The following additional libraries are used:
 1. **Leaflet**: JavaScript library for interactive maps - Version: 1.7.1 - [Leaflet Documentation](https://leafletjs.com/)
-
 2. **Leaflet.markercluster**: An extension to Leaflet that allows markers to be grouped into clusters to improve map display efficiency. - [Leaflet.markercluster Documentation](https://github.com/Leaflet/Leaflet.markercluster)
+The libraries are integrated into the project and no additional installation is required.
 
 ## Installation and startup
 
 1. Download the project from the repository.
-2. Make sure you have the necessary libraries and resources installed (Leaflet, Leaflet.markercluster).
-3. Open the HTML file in your web browser or use a local server to run it.
+2. Open the HTML file in your web browser or use a local server to run it.
 
 ## Configuration and Data
 
@@ -47,7 +47,6 @@ This application is designed to visualize markers on the map using the `Leaflet`
 ## Tasks for Future Development
 
 1. **Adding Interactivity**: I am considering adding additional interactivity for markers or additional layers on the map.
-2. **Optimizing Loading**: I am considering optimizing the loading of a large number of markers to improve performance.
 
 ## License
 
