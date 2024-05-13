@@ -24,7 +24,6 @@
 
 Використано наступні додаткові бібліотеки:
 1. **Leaflet**: JavaScript-бібліотека для інтерактивних карт.
-   - Версія: 1.7.1
    - [Leaflet Documentation](https://leafletjs.com/)
 2. **Leaflet.markercluster**: Розширення для Leaflet, яке надає можливість групування маркерів у кластери для покращення ефективності відображення на мапі.
    - [Leaflet.markercluster Documentation](https://github.com/Leaflet/Leaflet.markercluster)
