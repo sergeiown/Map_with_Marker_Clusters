@@ -13,7 +13,7 @@ export const topoLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{
     attribution: '© OpenTopoMap contributors',
     opacity: 1,
     minZoom: 5,
-    maxZoom: 17,
+    maxZoom: 19,
     ext: 'png',
 });
 
