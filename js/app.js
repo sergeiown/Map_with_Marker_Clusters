@@ -4,7 +4,7 @@ https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
 import { addStyles } from '../js/styles.js';
 import { initializeMap } from '../js/map.js';
 import { addMarkers } from './markers.js';
-import { addUkraineGeoJSON, addUkraineBorderGeoJSON } from '../js/geojson.js';
+import { addGeoBoundariesGeneral, addGeoBoundariesSimplified, addGeoBoundariesDetailed } from '../js/geojson.js';
 import { createDropdown } from '../js/dropdown.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,9 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addMarkers(map);
 
-    addUkraineGeoJSON(map);
+    addGeoBoundariesGeneral(map);
 
-    addUkraineBorderGeoJSON(map);
+    addGeoBoundariesSimplified(map);
+
+    addGeoBoundariesDetailed(map);
 
     createDropdown(map);
 });
