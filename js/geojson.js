@@ -7,53 +7,57 @@ Political Administrative Boundaries Database https://www.geoboundaries.org
 is an open license, standardized resource of boundaries for every country
 in the world. */
 
-export function addGeoBoundariesGeneral(map) {
-    fetch('./json/geoBoundariesGeneral.geojson')
-        .then((response) => response.json())
-        .then((data) => {
-            L.geoJSON(data, {
-                style: {
-                    color: '#FFD700',
-                    weight: 9,
-                    opacity: 0.8,
-                    dashArray: '4',
-                    fillOpacity: 0,
-                },
-            }).addTo(map);
-        })
-        .catch((error) => console.error('Error loading Ukraine general border geoJSON:', error));
-}
+export function addGeoBoundaries(map) {
+    const urls = [
+        './json/geoBoundariesGeneral.geojson',
+        './json/geoBoundariesSimplified.geojson',
+        './json/geoBoundariesDetailed.geojson',
+    ];
 
-export function addGeoBoundariesSimplified(map) {
-    fetch('./json/geoBoundariesSimplified.geojson')
-        .then((response) => response.json())
-        .then((data) => {
-            L.geoJSON(data, {
-                style: {
-                    color: '#3388ff',
-                    weight: 4,
-                    opacity: 0.2,
-                    dashArray: '0',
-                    fillOpacity: 0,
-                },
-            }).addTo(map);
+    Promise.allSettled(urls.map((url) => fetch(url).then((response) => response.json())))
+        .then((results) => {
+            results.forEach((result, index) => {
+                if (result.status === 'fulfilled') {
+                    const data = result.value;
+                    switch (index) {
+                        case 0:
+                            L.geoJSON(data, {
+                                style: {
+                                    color: '#FFD700',
+                                    weight: 9,
+                                    opacity: 0.8,
+                                    dashArray: '4',
+                                    fillOpacity: 0,
+                                },
+                            }).addTo(map);
+                            break;
+                        case 1:
+                            L.geoJSON(data, {
+                                style: {
+                                    color: '#3388ff',
+                                    weight: 4,
+                                    opacity: 0.2,
+                                    dashArray: '0',
+                                    fillOpacity: 0,
+                                },
+                            }).addTo(map);
+                            break;
+                        case 2:
+                            L.geoJSON(data, {
+                                style: {
+                                    color: '#2d7ae6',
+                                    weight: 2,
+                                    opacity: 0.2,
+                                    dashArray: '0',
+                                    fillOpacity: 0,
+                                },
+                            }).addTo(map);
+                            break;
+                    }
+                } else {
+                    console.error(`Error loading geoJSON from ${urls[index]}:`, result.reason);
+                }
+            });
         })
-        .catch((error) => console.error('Error loading Ukraine simplified geoJSON:', error));
-}
-
-export function addGeoBoundariesDetailed(map) {
-    fetch('./json/geoBoundariesDetailed.geojson')
-        .then((response) => response.json())
-        .then((data) => {
-            L.geoJSON(data, {
-                style: {
-                    color: '#2d7ae6',
-                    weight: 2,
-                    opacity: 0.2,
-                    dashArray: '0',
-                    fillOpacity: 0,
-                },
-            }).addTo(map);
-        })
-        .catch((error) => console.error('Error loading Ukraine detailed geoJSON:', error));
+        .catch((error) => console.error('Unexpected loading geoJSON error:', error));
 }
