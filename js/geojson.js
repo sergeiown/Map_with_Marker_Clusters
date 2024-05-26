@@ -9,9 +9,9 @@ in the world. */
 
 export function addGeoBoundaries(map) {
     const urls = [
-        './json/geoBoundariesGeneral.geojson',
-        './json/geoBoundariesSimplified.geojson',
         './json/geoBoundariesDetailed.geojson',
+        './json/geoBoundariesSimplified.geojson',
+        './json/geoBoundariesGeneral.geojson',
     ];
 
     Promise.allSettled(urls.map((url) => fetch(url).then((response) => response.json())))
@@ -23,11 +23,11 @@ export function addGeoBoundaries(map) {
                         case 0:
                             L.geoJSON(data, {
                                 style: {
-                                    color: '#FFD700',
-                                    weight: 9,
-                                    opacity: 0.8,
-                                    dashArray: '4',
-                                    fillOpacity: 0,
+                                    color: '#2d7ae6',
+                                    weight: 2,
+                                    opacity: 0.2,
+                                    dashArray: '0',
+                                    fillOpacity: 0.04,
                                 },
                             }).addTo(map);
                             break;
@@ -45,10 +45,10 @@ export function addGeoBoundaries(map) {
                         case 2:
                             L.geoJSON(data, {
                                 style: {
-                                    color: '#2d7ae6',
-                                    weight: 2,
-                                    opacity: 0.2,
-                                    dashArray: '0',
+                                    color: '#FFD700',
+                                    weight: 9,
+                                    opacity: 0.7,
+                                    dashArray: '4',
                                     fillOpacity: 0,
                                 },
                             }).addTo(map);
