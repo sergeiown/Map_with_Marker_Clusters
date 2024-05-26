@@ -4,7 +4,7 @@
 
 ## Overview
 
-This application is designed to visualize markers on the map using the `Leaflet` library and group them using `Leaflet.markercluster`. The application is designed to display the location of companies on the map with the ability to group markers into clusters. Various options for displaying map layers and additional options are available.
+The application is designed to display the location of companies in a user-friendly way on a map with the ability to group the created markers into clusters. Various options for displaying map layers and additional options are available.
 
 | Structure:  ||
 | --- | --- |
@@ -25,8 +25,10 @@ This application is designed to visualize markers on the map using the `Leaflet`
 The following additional libraries are used:
 1. **Leaflet**: JavaScript library for interactive maps
    - [Leaflet Documentation](https://leafletjs.com/)
-3. **Leaflet.markercluster**: An extension to Leaflet that allows markers to be grouped into clusters to improve map display efficiency.
+2. **Leaflet.markercluster**: An extension to Leaflet that allows markers to be grouped into clusters to improve map display efficiency.
    - [Leaflet.markercluster Documentation](https://github.com/Leaflet/Leaflet.markercluster)
+3. **geoBoundaries Global Database**: Political Administrative Boundaries Database an open license, standardized resource of boundaries for every country in the world.
+   - [geoBoundaries Global Database](https://www.geoboundaries.org)
 
 The libraries are integrated into the project and no additional installation is required.
 
@@ -44,8 +46,9 @@ The libraries are integrated into the project and no additional installation is 
 
 ## Additional Geodata
 
-1. **Regions of Ukraine**: The geodata for the regions of Ukraine are loaded from the file `ukraine.geojson`.
-2. **Borders of Ukraine**: Geodata for the borders of Ukraine are loaded from the file `ukraine_border.geojson`.
+1. **State borders of Ukraine**: Geodata for the borders of Ukraine are loaded from the `geoBoundariesGeneral.geojson` file.
+2. **Regional borders**: The geodata for Ukrainian regions are loaded from the `geoBoundariesSimplified.geojson` file.
+3. **District borders**: The geodata for for districts of Ukraine are loaded from the `geoBoundariesDetailed.geojson` file.
 
 ## Tasks for Future Development
 
