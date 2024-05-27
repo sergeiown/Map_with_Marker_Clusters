@@ -31,6 +31,7 @@ export function initializeMap() {
             position: 'topleft',
             title: 'Set full screen mode',
             imageSrc: './markers/full_screen.png',
+            extraClass: 'full-screen-button',
             onClick: function () {
                 const mapContainer = document.getElementById('map');
                 toggleFullScreen(mapContainer);

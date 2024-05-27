@@ -7,7 +7,10 @@ export function createControlButton(options) {
     return L.Control.extend({
         options: options,
         onAdd: function () {
-            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control custom-button');
+            const container = L.DomUtil.create(
+                'div',
+                `leaflet-bar leaflet-control custom-button ${options.extraClass || ''}`
+            );
             container.title = options.title;
 
             const image = L.DomUtil.create('img', 'center-image', container);
