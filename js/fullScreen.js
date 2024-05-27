@@ -25,24 +25,48 @@ export function toggleFullScreen(element) {
     if (!document.fullscreenElement) {
         if (element.requestFullscreen) {
             handleFullScreenRequest(element.requestFullscreen());
+            document.addEventListener('fullscreenchange', () => {
+                updateFullScreenButton(!!document.fullscreenElement);
+            });
         } else if (element.mozRequestFullScreen) {
             handleFullScreenRequest(element.mozRequestFullScreen()); // Firefox
+            document.addEventListener('mozfullscreenchange', () => {
+                updateFullScreenButton(!!document.mozFullScreenElement);
+            });
         } else if (element.webkitRequestFullscreen) {
             handleFullScreenRequest(element.webkitRequestFullscreen()); // Chrome, Safari, Opera
+            document.addEventListener('webkitfullscreenchange', () => {
+                updateFullScreenButton(!!document.webkitFullscreenElement);
+            });
         } else if (element.msRequestFullscreen) {
             handleFullScreenRequest(element.msRequestFullscreen()); // IE/Edge
+            document.addEventListener('MSFullscreenChange', () => {
+                updateFullScreenButton(!!document.msFullscreenElement);
+            });
         } else {
             console.error('Fullscreen API is not supported by this browser.');
         }
     } else {
         if (document.exitFullscreen) {
             handleFullScreenExit(document.exitFullscreen());
+            document.removeEventListener('fullscreenchange', () => {
+                updateFullScreenButton(!!document.fullscreenElement);
+            });
         } else if (document.mozCancelFullScreen) {
             handleFullScreenExit(document.mozCancelFullScreen());
+            document.removeEventListener('mozfullscreenchange', () => {
+                updateFullScreenButton(!!document.mozFullScreenElement);
+            });
         } else if (document.webkitExitFullscreen) {
             handleFullScreenExit(document.webkitExitFullscreen());
+            document.removeEventListener('webkitfullscreenchange', () => {
+                updateFullScreenButton(!!document.webkitFullscreenElement);
+            });
         } else if (document.msExitFullscreen) {
             handleFullScreenExit(document.msExitFullscreen());
+            document.removeEventListener('MSFullscreenChange', () => {
+                updateFullScreenButton(!!document.msFullscreenElement);
+            });
         } else {
             console.error('Fullscreen API is not supported by this browser.');
         }
@@ -50,7 +74,7 @@ export function toggleFullScreen(element) {
 }
 
 function updateFullScreenButton(isFullScreen) {
-    const fullScreenButton = document.querySelector('.leaflet-control-container .full-screen-button');
+    const fullScreenButton = document.querySelector('.full-screen-button');
     if (fullScreenButton) {
         if (isFullScreen) {
             fullScreenButton.title = 'Exit full screen mode';
@@ -61,16 +85,3 @@ function updateFullScreenButton(isFullScreen) {
         }
     }
 }
-
-document.addEventListener('fullscreenchange', () => {
-    updateFullScreenButton(!!document.fullscreenElement);
-});
-document.addEventListener('webkitfullscreenchange', () => {
-    updateFullScreenButton(!!document.webkitFullscreenElement);
-});
-document.addEventListener('mozfullscreenchange', () => {
-    updateFullScreenButton(!!document.mozFullScreenElement);
-});
-document.addEventListener('MSFullscreenChange', () => {
-    updateFullScreenButton(!!document.msFullscreenElement);
-});
