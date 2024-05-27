@@ -22,20 +22,6 @@ export function toggleFullScreen(element) {
             });
     }
 
-    function updateButtonOnFullScreenChange() {
-        updateFullScreenButton(
-            !!document.fullscreenElement ||
-                !!document.mozFullScreenElement ||
-                !!document.webkitFullscreenElement ||
-                !!document.msFullscreenElement
-        );
-    }
-
-    document.addEventListener('fullscreenchange', updateButtonOnFullScreenChange);
-    document.addEventListener('mozfullscreenchange', updateButtonOnFullScreenChange);
-    document.addEventListener('webkitfullscreenchange', updateButtonOnFullScreenChange);
-    document.addEventListener('MSFullscreenChange', updateButtonOnFullScreenChange);
-
     if (
         !document.fullscreenElement &&
         !document.mozFullScreenElement &&
@@ -68,6 +54,15 @@ export function toggleFullScreen(element) {
     }
 }
 
+function updateButtonOnFullScreenChange() {
+    updateFullScreenButton(
+        !!document.fullscreenElement ||
+            !!document.mozFullScreenElement ||
+            !!document.webkitFullscreenElement ||
+            !!document.msFullscreenElement
+    );
+}
+
 function updateFullScreenButton(isFullScreen) {
     const fullScreenButton = document.querySelector('.full-screen-button');
     if (fullScreenButton) {
@@ -86,3 +81,7 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault();
     }
 });
+document.addEventListener('fullscreenchange', updateButtonOnFullScreenChange);
+document.addEventListener('mozfullscreenchange', updateButtonOnFullScreenChange);
+document.addEventListener('webkitfullscreenchange', updateButtonOnFullScreenChange);
+document.addEventListener('MSFullscreenChange', updateButtonOnFullScreenChange);
