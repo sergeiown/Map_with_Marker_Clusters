@@ -29,26 +29,26 @@ export function addStyles() {
         width: 100%;
         overflow: hidden;
     }
+
+    .leaflet-bar.leaflet-control {
+        border: none;
+    }
     
-    #company-dropdown {
+    .company-dropdown {
         cursor: pointer;
+        border: none;
+        outline: none;
         border-radius: 5px;
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgba(255, 255, 255, 0.8);
-        outline: none;
-        color: rgb(40, 40, 40);
-        -webkit-text-fill-color: rgb(40, 40, 40);
-        width: 40%;
+        background-color: rgb(255, 255, 255);
+        color: black;
         height: 35px;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
         font-weight: bold;
         font-size: 14px;
         white-space: nowrap;
         text-overflow: ellipsis;
+        opacity: 0.8 !important;
+        margin-bottom: 15px;
     }
     
     .leaflet-bar.leaflet-control.custom-button {

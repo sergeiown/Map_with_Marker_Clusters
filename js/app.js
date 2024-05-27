@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const map = initializeMap();
 
+    createDropdown(map);
+
     addMarkers(map);
 
     addGeoBoundaries(map);
-
-    createDropdown(map);
 });

@@ -57,7 +57,6 @@ export function addLegend(map) {
             function updateLegendStyle() {
                 if (legendControl !== null) {
                     let shiftAmountRight = '25px';
-                    let shiftAmountTop = '45px';
 
                     const legendContainer = legendControl.getContainer();
 
@@ -66,7 +65,6 @@ export function addLegend(map) {
                         legendContainer.style.top = '';
                     } else if (isMobile && window.matchMedia('(orientation: portrait)').matches && legendControl) {
                         legendContainer.style.right = '';
-                        legendContainer.style.top = shiftAmountTop;
                     } else {
                         legendContainer.style.right = '';
                         legendContainer.style.left = '';

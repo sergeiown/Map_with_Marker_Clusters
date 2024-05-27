@@ -66,15 +66,17 @@ export function initializeMap() {
     });
     map.addControl(new frontButton());
 
-    const legendButton = createControlButton({
-        position: 'topright',
-        title: 'Legend',
-        imageSrc: './markers/legend.png',
-        onClick: function () {
-            addLegend(map);
-        },
+    map.on('dropdownCreated', function () {
+        const legendButton = createControlButton({
+            position: 'topright',
+            title: 'Legend',
+            imageSrc: './markers/legend.png',
+            onClick: function () {
+                addLegend(map);
+            },
+        });
+        map.addControl(new legendButton());
     });
-    map.addControl(new legendButton());
 
     const layerControl = L.control.layers(layers.baseLayers, null, { position: 'topleft' });
     layerControl.addTo(map);
