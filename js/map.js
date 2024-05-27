@@ -5,6 +5,7 @@ import * as layers from '../js/layers.js';
 import { isMobile } from '../js/mobileDetector.js';
 import { createControlButton } from '../js/buttons.js';
 import { addLegend } from '../js/legend.js';
+import { toggleFullScreen } from '../js/fullScreen.js';
 import { updateControlStyle, updateLayer, gradualOpacityAnimation } from '../js/mapUtils.js';
 
 export function initializeMap() {
@@ -24,6 +25,19 @@ export function initializeMap() {
         },
     });
     map.addControl(new centerButton());
+
+    if (!isMobile) {
+        const fullScreenButton = createControlButton({
+            position: 'topleft',
+            title: 'Set full screen mode',
+            imageSrc: './markers/full_screen.png',
+            onClick: function () {
+                const mapContainer = document.getElementById('map');
+                toggleFullScreen(mapContainer);
+            },
+        });
+        map.addControl(new fullScreenButton());
+    }
 
     const frontButton = createControlButton({
         position: 'bottomleft',
