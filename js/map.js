@@ -13,6 +13,7 @@ export function initializeMap() {
 
     const map = L.map('map').setView([49.1, 31.2], initialZoom);
 
+    // Create a button to set the default coordinates and zoom
     const centerButton = createControlButton({
         position: 'topleft',
         title: 'Set the default position',
@@ -26,6 +27,7 @@ export function initializeMap() {
     });
     map.addControl(new centerButton());
 
+    // Creation of full screen button for desktop device
     if (!isMobile) {
         const fullScreenButton = createControlButton({
             position: 'topleft',
@@ -40,6 +42,7 @@ export function initializeMap() {
         map.addControl(new fullScreenButton());
     }
 
+    // Create a button to call the external map frame
     const frontButton = createControlButton({
         position: 'bottomleft',
         title: 'Front line map',
@@ -66,6 +69,7 @@ export function initializeMap() {
     });
     map.addControl(new frontButton());
 
+    // Create a button to call the legend right after creating a dropdown list
     map.on('dropdownCreated', function () {
         const legendButton = createControlButton({
             position: 'topright',
@@ -78,9 +82,11 @@ export function initializeMap() {
         map.addControl(new legendButton());
     });
 
+    // Create a button for selecting map layers
     const layerControl = L.control.layers(layers.baseLayers, null, { position: 'topleft' });
     layerControl.addTo(map);
 
+    // Create a scale control tool
     const scaleControl = L.control
         .scale({
             Width: 50,
@@ -93,6 +99,7 @@ export function initializeMap() {
 
     scaleControl.getContainer().setAttribute('title', 'Map scale');
 
+    // Create zoom control buttons
     map.zoomControl.setPosition('bottomright');
 
     updateLayer(map);
