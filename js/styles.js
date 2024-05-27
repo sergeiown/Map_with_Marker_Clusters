@@ -31,7 +31,7 @@ export function addStyles() {
     }
 
     .leaflet-bar.leaflet-control {
-        border: none;
+        border: none;        
     }
     
     .company-dropdown {
@@ -43,6 +43,7 @@ export function addStyles() {
         background-color: rgb(255, 255, 255);
         color: black;
         height: 35px;
+        max-width: 70vw;
         font-weight: bold;
         font-size: 14px;
         white-space: nowrap;
