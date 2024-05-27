@@ -80,3 +80,9 @@ function updateFullScreenButton(isFullScreen) {
         }
     }
 }
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'F11') {
+        event.preventDefault();
+    }
+});
