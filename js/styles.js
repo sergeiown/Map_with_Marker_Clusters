@@ -43,7 +43,7 @@ export function addStyles() {
         background-color: rgb(255, 255, 255);
         color: black;
         height: 35px;
-        max-width: 70vw;
+        max-width: 65vw;
         font-weight: bold;
         font-size: 14px;
         white-space: nowrap;
