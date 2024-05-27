@@ -12,8 +12,7 @@ The application is designed to display the location of companies in a user-frien
 
 | Appearance:  ||
 | --- | --- | 
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/4f9fe4f3-4ced-418b-8502-aa8558c9e048) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/8b8f3e2e-32ec-4baa-8391-def278b63bd3) |
-| Administrative layer                  | Topographic layer                      |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/abc83fb7-60c7-4206-82ed-f07e37d22328) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/a58dd4a9-6bb3-49f1-b53a-e0cbb946f198) |
 
 | Appearance (mobile version):  ||
 | --- | --- |
