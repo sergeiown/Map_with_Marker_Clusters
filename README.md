@@ -8,7 +8,7 @@ The application is designed to display the location of companies in a user-frien
 
 | Structure:  ||
 | --- | --- |
-| Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/d056e412-4625-43dc-83f2-e4e8c017b6e3) |
+| Dependencies | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/181e348c-6f12-4d21-9ada-1396227960be) |
 
 | Appearance:  ||
 | --- | --- | 
