@@ -78,7 +78,7 @@ export function addStyles() {
     }
     
     .custom-dropdown-item:hover {
-        background-color: rgb(225, 225, 225);
+        background-color: rgb(250, 250, 250);
     }
 
     .leaflet-bar.leaflet-control.custom-button {
