@@ -62,9 +62,6 @@ export function addStyles() {
         width: 200px;
         max-height: 260px;
         overflow-y: auto;
-        overflow-x: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         border: none;
         border-radius: 5px;
         background-color: rgba(245, 245, 245);
@@ -73,6 +70,9 @@ export function addStyles() {
     }
     
     .custom-dropdown-item {
+        overflow-x: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         font-size: 14px;
         padding: 10px;
         cursor: pointer;

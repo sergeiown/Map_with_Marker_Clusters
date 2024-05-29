@@ -2,7 +2,7 @@
     {
         "lat": 50.45090527867344,
         "lng": 30.521412882155204,
-        "company": "Geek Code",
+        "company": "Geek Code company of the future",
         "address": "Somewhere in Ukraine",
         "info": "Tech solutions for the future",
         "marker": "blue"
@@ -26,7 +26,7 @@
     {
         "lat": 49.58879379529434,
         "lng": 34.553311010136014,
-        "company": "Cyber Nauts",
+        "company": "Desperate cyberneticists of our time",
         "address": "Somewhere in Ukraine",
         "info": "Navigating the digital world",
         "marker": "pink"
@@ -42,7 +42,7 @@
     {
         "lat": 49.4186548962826,
         "lng": 26.97717159437349,
-        "company": "Inno Hub",
+        "company": "Creative hub of innovation",
         "address": "Somewhere in Ukraine",
         "info": "Fueling creativity in IT",
         "marker": "green"
