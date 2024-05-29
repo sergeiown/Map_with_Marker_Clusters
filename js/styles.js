@@ -40,19 +40,18 @@ export function addStyles() {
         outline: none;
         border-radius: 5px;
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgb(255, 255, 255);
-        color: black;
+        background-color: rgb(225, 225, 225);
+        color: rgb(40, 40, 40);
         height: 25px;
         width: 250px;
         font-weight: bold;
         font-size: 14px;
-        opacity: 0.8 !important;
         padding-left: 10px;
     }
 
     .company-search-input::placeholder {
-        color: black;
-        opacity: 0.8 !important;
+        color: rgb(40, 40, 40);
+        
     }
 
     .custom-dropdown {
@@ -64,7 +63,7 @@ export function addStyles() {
         overflow-y: auto;
         border: none;
         border-radius: 5px;
-        background-color: rgba(245, 245, 245);
+        background-color: rgba(225, 225, 225);
         z-index: 1000;
         display: none;
     }
@@ -86,13 +85,12 @@ export function addStyles() {
         width: 50px;
         height: 50px;
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(225, 225, 225);
         border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        opacity: 0.8 !important;
     }
     
     .center-image {
@@ -103,17 +101,17 @@ export function addStyles() {
         width: 50px !important;
         height: 50px !important;
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(225, 225, 225);
         border-radius: 5px;
-        opacity: 0.8 !important;
+        
     }
     
     .leaflet-control-layers {
         font-weight: bold;
         font-size: 14px;
         line-height: 2;
-        background-color: rgba(245, 245, 245);
-        color: black;
+        background-color: rgba(225, 225, 225);
+        color: rgb(40, 40, 40);
         border-radius: 5px;
         border: none !important;
     }
@@ -130,7 +128,7 @@ export function addStyles() {
     .leaflet-control-scale-line {
         color: rgb(40, 40, 40);
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(225, 225, 225);
         border-radius: 5px;
         font-weight: bolder;
         height: 20px !important;
@@ -152,18 +150,18 @@ export function addStyles() {
         width: 35px !important;
         padding-top: 10px;
         padding-bottom: 10px;
+        background-color: rgb(225, 225, 225) !important;
     }
     
     .leaflet-control-zoom {
         border: 2px solid rgb(150, 150, 150) !important;
-        background-color: rgb(255, 255, 255) !important;
         border-radius: 5px;
-        opacity: 0.8 !important;
+        
     }
     
     .legend {
         cursor: pointer;
-        background-color: rgba(245, 245, 245);
+        background-color: rgba(225, 225, 225);
         border-radius: 5px;
         padding: 10px;
         color: rgb(40, 40, 40);
@@ -190,7 +188,7 @@ export function addStyles() {
     }
 
     .leaflet-popup-content-wrapper {
-        background-color: rgba(245, 245, 245);
+        background-color: rgba(225, 225, 225);
     }
     `;
 
