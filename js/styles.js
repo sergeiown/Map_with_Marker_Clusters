@@ -29,9 +29,9 @@ export function addStyles() {
         width: 100%;
         overflow: hidden;
     }
-
+    
     .leaflet-bar.leaflet-control {
-        border: none;        
+        border: none;
     }
     
     .company-search-input {
@@ -48,12 +48,11 @@ export function addStyles() {
         font-size: 14px;
         padding-left: 10px;
     }
-
+    
     .company-search-input::placeholder {
         color: rgb(40, 40, 40);
-        
     }
-
+    
     .custom-dropdown {
         position: absolute;
         top: 40px;
@@ -80,7 +79,7 @@ export function addStyles() {
     .custom-dropdown-item:hover {
         background-color: rgb(255, 255, 255);
     }
-
+    
     .leaflet-bar.leaflet-control.custom-button {
         width: 50px;
         height: 50px;
@@ -103,7 +102,6 @@ export function addStyles() {
         border: 2px solid rgb(150, 150, 150);
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
-        
     }
     
     .leaflet-control-layers {
@@ -148,15 +146,14 @@ export function addStyles() {
     .leaflet-control-zoom-in,
     .leaflet-control-zoom-out {
         width: 35px !important;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         background-color: rgb(245, 245, 245) !important;
     }
     
     .leaflet-control-zoom {
         border: 2px solid rgb(150, 150, 150) !important;
         border-radius: 5px;
-        
     }
     
     .legend {
@@ -182,14 +179,15 @@ export function addStyles() {
         font-size: 14px;
         line-height: 2;
     }
-
+    
     .leaflet-marker-icon {
-        filter: drop-shadow(4px 12px 6px rgba(0,0,0,0.5));
+        filter: drop-shadow(4px 12px 6px rgba(0, 0, 0, 0.5));
     }
-
+    
     .leaflet-popup-content-wrapper {
         background-color: rgb(245, 245, 245);
     }
+    
     `;
 
     document.head.appendChild(styleTag);
