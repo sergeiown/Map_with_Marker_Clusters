@@ -12,28 +12,49 @@ export async function createDropdown(map) {
     dropdown.onAdd = function () {
         const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
 
-        const select = L.DomUtil.create('select', 'company-dropdown', container);
+        const searchInput = L.DomUtil.create('input', 'company-search-input', container);
+        searchInput.type = 'text';
+        searchInput.placeholder = '🔎 Пошук...';
+        searchInput.maxLength = 27;
 
-        const defaultOption = document.createElement('option');
-        defaultOption.value = 'default';
-        defaultOption.text = 'Виберіть компанію з переліку:';
-        select.appendChild(defaultOption);
+        const dataList = L.DomUtil.create('datalist', 'company-datalist', container);
+        dataList.id = 'company-list';
 
-        companiesData.forEach((company) => {
-            const option = document.createElement('option');
-            option.value = company.company;
-            option.text = company.company;
-            select.appendChild(option);
+        // Update datalist options based on search input
+        function updateOptions(filter = '') {
+            dataList.innerHTML = '';
+
+            companiesData
+                .filter((company) => company.company.toLowerCase().includes(filter.toLowerCase()))
+                .forEach((company) => {
+                    const option = document.createElement('option');
+                    option.value = company.company;
+                    dataList.appendChild(option);
+                });
+        }
+
+        updateOptions();
+
+        searchInput.setAttribute('list', 'company-list');
+
+        searchInput.addEventListener('input', (event) => {
+            updateOptions(event.target.value);
         });
 
-        select.addEventListener('change', (event) => {
+        searchInput.addEventListener('change', (event) => {
             const selectedCompany = event.target.value;
 
             const selectedCompanyData = companiesData.find((company) => company.company === selectedCompany);
 
-            map.flyTo([selectedCompanyData.lat, selectedCompanyData.lng], 17, {
-                duration: 4,
-            });
+            // Clear the input after selection, reset options to the initial state and remove focus from the input field
+            if (selectedCompanyData) {
+                map.flyTo([selectedCompanyData.lat, selectedCompanyData.lng], 17, {
+                    duration: 4,
+                });
+                searchInput.value = '';
+                updateOptions();
+                searchInput.blur();
+            }
         });
 
         L.DomEvent.disableClickPropagation(container);

@@ -34,7 +34,7 @@ export function addStyles() {
         border: none;        
     }
     
-    .company-dropdown {
+    .company-search-input {
         cursor: pointer;
         border: none;
         outline: none;
@@ -42,14 +42,25 @@ export function addStyles() {
         border: 2px solid rgb(150, 150, 150);
         background-color: rgb(255, 255, 255);
         color: black;
-        height: 35px;
-        max-width: 65vw;
+        height: 25px;
+        // width: 150px;
         font-weight: bold;
         font-size: 14px;
+        overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         opacity: 0.8 !important;
-        margin-bottom: 15px;
+        padding-left: 10px;
+        margin-bottom: 19px;
+    }
+
+    .company-search-input::placeholder {
+        color: black;
+        opacity: 0.8 !important;
+    }
+
+    .company-datalist {
+        background-color: rgba(250, 250, 250);
     }
     
     .leaflet-bar.leaflet-control.custom-button {
@@ -82,11 +93,10 @@ export function addStyles() {
         font-weight: bold;
         font-size: 14px;
         line-height: 2;
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(250, 250, 250);
         color: rgb(0, 0, 0);
         border-radius: 5px;
         border: none !important;
-        opacity: 0.8 !important;
     }
     
     .leaflet-control-scale {
@@ -134,7 +144,7 @@ export function addStyles() {
     
     .legend {
         cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(250, 250, 250);
         border-radius: 5px;
         padding: 10px;
         color: rgb(40, 40, 40);
