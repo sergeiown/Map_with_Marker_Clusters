@@ -42,7 +42,7 @@ export function addLegend(map) {
 
             legendControl.addTo(map);
 
-            map.on('click', () => {
+            function handleClick() {
                 if (legendControl !== null) {
                     map.removeControl(legendControl);
                     legendControl = null;
@@ -53,7 +53,14 @@ export function addLegend(map) {
                             button.style.display = 'flex';
                         });
                 }
+            }
+
+            map.on('click', handleClick);
+
+            document.querySelectorAll('input').forEach((input) => {
+                input.addEventListener('click', handleClick);
             });
+
             function updateLegendStyle() {
                 if (legendControl !== null) {
                     let shiftAmountRight = '25px';

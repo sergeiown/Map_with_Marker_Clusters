@@ -43,15 +43,11 @@ export function addStyles() {
         background-color: rgb(255, 255, 255);
         color: black;
         height: 25px;
-        // width: 150px;
+        width: 250px;
         font-weight: bold;
         font-size: 14px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         opacity: 0.8 !important;
         padding-left: 10px;
-        margin-bottom: 19px;
     }
 
     .company-search-input::placeholder {
@@ -59,10 +55,32 @@ export function addStyles() {
         opacity: 0.8 !important;
     }
 
-    .company-datalist {
-        background-color: rgba(250, 250, 250);
+    .custom-dropdown {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 200px;
+        max-height: 260px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(250, 250, 250);
+        z-index: 1000;
+        display: none;
     }
     
+    .custom-dropdown-item {
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .custom-dropdown-item:hover {
+        background-color: #f0f0f0;
+    }
+
     .leaflet-bar.leaflet-control.custom-button {
         width: 50px;
         height: 50px;

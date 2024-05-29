@@ -15,46 +15,60 @@ export async function createDropdown(map) {
         const searchInput = L.DomUtil.create('input', 'company-search-input', container);
         searchInput.type = 'text';
         searchInput.placeholder = '🔎 Пошук...';
-        searchInput.maxLength = 27;
+        searchInput.maxLength = 30;
 
-        const dataList = L.DomUtil.create('datalist', 'company-datalist', container);
-        dataList.id = 'company-list';
+        const customDropdown = L.DomUtil.create('div', 'custom-dropdown', container);
+        customDropdown.id = 'company-list';
 
-        // Update datalist options based on search input
+        // Update custom dropdown options based on search input
         function updateOptions(filter = '') {
-            dataList.innerHTML = '';
+            customDropdown.innerHTML = '';
 
             companiesData
                 .filter((company) => company.company.toLowerCase().includes(filter.toLowerCase()))
                 .forEach((company) => {
-                    const option = document.createElement('option');
-                    option.value = company.company;
-                    dataList.appendChild(option);
+                    const option = document.createElement('div');
+                    option.className = 'custom-dropdown-item';
+                    option.textContent = company.company;
+                    customDropdown.appendChild(option);
+
+                    option.addEventListener('click', () => {
+                        selectCompany(company);
+                    });
                 });
+        }
+
+        function selectCompany(company) {
+            map.flyTo([company.lat, company.lng], 17, { duration: 4 });
+            searchInput.value = '';
+            updateOptions();
+            searchInput.blur();
         }
 
         updateOptions();
 
-        searchInput.setAttribute('list', 'company-list');
-
         searchInput.addEventListener('input', (event) => {
             updateOptions(event.target.value);
+            customDropdown.style.display = 'block';
         });
 
-        searchInput.addEventListener('change', (event) => {
-            const selectedCompany = event.target.value;
+        searchInput.addEventListener('focus', () => {
+            customDropdown.style.display = 'block';
+        });
 
-            const selectedCompanyData = companiesData.find((company) => company.company === selectedCompany);
+        searchInput.addEventListener('blur', () => {
+            setTimeout(() => {
+                customDropdown.style.display = 'none';
+            }, 100);
+        });
 
-            // Clear the input after selection, reset options to the initial state and remove focus from the input field
-            if (selectedCompanyData) {
-                map.flyTo([selectedCompanyData.lat, selectedCompanyData.lng], 17, {
-                    duration: 4,
-                });
-                searchInput.value = '';
-                updateOptions();
-                searchInput.blur();
-            }
+        // Disable map scroll zoom when mouse is over the dropdown
+        customDropdown.addEventListener('mouseenter', () => {
+            map.scrollWheelZoom.disable();
+        });
+
+        customDropdown.addEventListener('mouseleave', () => {
+            map.scrollWheelZoom.enable();
         });
 
         L.DomEvent.disableClickPropagation(container);
