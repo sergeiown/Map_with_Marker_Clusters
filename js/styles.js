@@ -67,18 +67,19 @@ export function addStyles() {
         text-overflow: ellipsis;
         border: none;
         border-radius: 5px;
-        background-color: rgb(250, 250, 250);
+        background-color: rgba(245, 245, 245);
         z-index: 1000;
         display: none;
     }
     
     .custom-dropdown-item {
+        font-size: 14px;
         padding: 10px;
         cursor: pointer;
     }
     
     .custom-dropdown-item:hover {
-        background-color: #f0f0f0;
+        background-color: rgb(225, 225, 225);
     }
 
     .leaflet-bar.leaflet-control.custom-button {
@@ -111,8 +112,8 @@ export function addStyles() {
         font-weight: bold;
         font-size: 14px;
         line-height: 2;
-        background-color: rgba(250, 250, 250);
-        color: rgb(0, 0, 0);
+        background-color: rgba(245, 245, 245);
+        color: black;
         border-radius: 5px;
         border: none !important;
     }
@@ -162,7 +163,7 @@ export function addStyles() {
     
     .legend {
         cursor: pointer;
-        background-color: rgba(250, 250, 250);
+        background-color: rgba(245, 245, 245);
         border-radius: 5px;
         padding: 10px;
         color: rgb(40, 40, 40);
@@ -186,6 +187,10 @@ export function addStyles() {
 
     .leaflet-marker-icon {
         filter: drop-shadow(4px 12px 6px rgba(0,0,0,0.5));
+    }
+
+    .leaflet-popup-content-wrapper {
+        background-color: rgba(245, 245, 245);
     }
     `;
 
