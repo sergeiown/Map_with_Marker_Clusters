@@ -14,8 +14,8 @@ export async function createDropdown(map) {
 
         const searchInput = L.DomUtil.create('input', 'company-search-input', container);
         searchInput.type = 'text';
-        searchInput.placeholder = '🔎 Пошук...';
-        searchInput.maxLength = 30;
+        searchInput.placeholder = '    Почніть пошук...';
+        searchInput.maxLength = 35;
 
         const customDropdown = L.DomUtil.create('div', 'custom-dropdown', container);
         customDropdown.id = 'company-list';
@@ -72,6 +72,9 @@ export async function createDropdown(map) {
         });
 
         L.DomEvent.disableClickPropagation(container);
+
+        animatePlaceholder(searchInput, searchInput.maxLength, searchInput.placeholder);
+
         return container;
     };
 
@@ -101,5 +104,24 @@ export async function createDropdown(map) {
                 dropdownContainer.style.bottom = '';
             }
         }
+    }
+
+    function animatePlaceholder(searchInput, maxLength, placeholder) {
+        let placeholderIndex = 0;
+        let direction = 1;
+        let animationSpeed = 750;
+
+        const generatePlaceholder = (index) => `${placeholder}${' '.repeat(index)}🔎`;
+
+        const animate = () => {
+            searchInput.placeholder = generatePlaceholder(placeholderIndex);
+            placeholderIndex += direction;
+            if (placeholderIndex >= maxLength - placeholder.trim().length || placeholderIndex <= 0) {
+                direction *= -1;
+            }
+            setTimeout(animate, animationSpeed);
+        };
+
+        animate();
     }
 }
