@@ -40,7 +40,7 @@ export function addStyles() {
         outline: none;
         border-radius: 5px;
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgb(225, 225, 225);
+        background-color: rgb(245, 245, 245);
         color: rgb(40, 40, 40);
         height: 25px;
         width: 250px;
@@ -63,7 +63,7 @@ export function addStyles() {
         overflow-y: auto;
         border: none;
         border-radius: 5px;
-        background-color: rgba(225, 225, 225);
+        background-color: rgb(245, 245, 245);
         z-index: 1000;
         display: none;
     }
@@ -78,14 +78,14 @@ export function addStyles() {
     }
     
     .custom-dropdown-item:hover {
-        background-color: rgb(250, 250, 250);
+        background-color: rgb(255, 255, 255);
     }
 
     .leaflet-bar.leaflet-control.custom-button {
         width: 50px;
         height: 50px;
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgb(225, 225, 225);
+        background-color: rgb(245, 245, 245);
         border-radius: 5px;
         display: flex;
         justify-content: center;
@@ -101,7 +101,7 @@ export function addStyles() {
         width: 50px !important;
         height: 50px !important;
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgb(225, 225, 225);
+        background-color: rgb(245, 245, 245);
         border-radius: 5px;
         
     }
@@ -110,7 +110,7 @@ export function addStyles() {
         font-weight: bold;
         font-size: 14px;
         line-height: 2;
-        background-color: rgba(225, 225, 225);
+        background-color: rgb(245, 245, 245);
         color: rgb(40, 40, 40);
         border-radius: 5px;
         border: none !important;
@@ -128,7 +128,7 @@ export function addStyles() {
     .leaflet-control-scale-line {
         color: rgb(40, 40, 40);
         border: 2px solid rgb(150, 150, 150);
-        background-color: rgba(225, 225, 225);
+        background-color: rgb(245, 245, 245);
         border-radius: 5px;
         font-weight: bolder;
         height: 20px !important;
@@ -150,7 +150,7 @@ export function addStyles() {
         width: 35px !important;
         padding-top: 10px;
         padding-bottom: 10px;
-        background-color: rgb(225, 225, 225) !important;
+        background-color: rgb(245, 245, 245) !important;
     }
     
     .leaflet-control-zoom {
@@ -161,7 +161,7 @@ export function addStyles() {
     
     .legend {
         cursor: pointer;
-        background-color: rgba(225, 225, 225);
+        background-color: rgb(245, 245, 245);
         border-radius: 5px;
         padding: 10px;
         color: rgb(40, 40, 40);
@@ -188,7 +188,7 @@ export function addStyles() {
     }
 
     .leaflet-popup-content-wrapper {
-        background-color: rgba(225, 225, 225);
+        background-color: rgb(245, 245, 245);
     }
     `;
 
