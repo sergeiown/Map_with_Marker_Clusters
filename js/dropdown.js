@@ -44,6 +44,7 @@ export async function createDropdown(map) {
             updateOptions();
             searchInput.blur();
             customDropdown.style.display = 'none';
+            map.scrollWheelZoom.enable();
         }
 
         updateOptions();
@@ -57,7 +58,7 @@ export async function createDropdown(map) {
             customDropdown.style.display = 'block';
         });
 
-        // Tracking the active element to prevent dropdowns from closing
+        // Tracking the active element to prevent dropdown from closing
         let isDropdownFocused = false;
         customDropdown.addEventListener('mouseenter', () => {
             isDropdownFocused = true;
