@@ -2,6 +2,7 @@
 https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
 
 import { getCompaniesData } from '../js/companiesData.js';
+import { isMobile } from '../js/mobileDetector.js';
 
 function createMarkers(map, data) {
     const markers = L.markerClusterGroup();
@@ -18,9 +19,13 @@ function createMarkers(map, data) {
             <b>${address.company}</b><br>
             ${address.address}<br>
             <small>${address.info}</small><br>
-            <button class="open-street-view" data-lat="${address.lat}" data-lng="${address.lng}">
-                Open Street View
-            </button>
+            ${
+                !isMobile
+                    ? `<button class="open-street-view" data-lat="${address.lat}" data-lng="${address.lng}">
+            Open Street View
+        </button>`
+                    : ''
+            }
         `;
         const popupOptions = {
             closeButton: true,
