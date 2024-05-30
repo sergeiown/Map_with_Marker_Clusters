@@ -22,7 +22,6 @@ export function initializeMap() {
             map.flyTo([49.1, 31.2], initialZoom, {
                 duration: 3,
             });
-            document.querySelector('.company-dropdown').selectedIndex = 0;
         },
     });
     map.addControl(new centerButton());
