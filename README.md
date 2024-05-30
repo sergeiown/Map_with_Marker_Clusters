@@ -12,11 +12,11 @@ The application is designed to display the location of companies in a user-frien
 
 | Appearance:  ||
 | --- | --- | 
-| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/abc83fb7-60c7-4206-82ed-f07e37d22328) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/a58dd4a9-6bb3-49f1-b53a-e0cbb946f198) |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/769807b7-57f3-41aa-b614-2a87e16703a9) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/3adc1b46-b44a-466f-bc08-837f902631f2) |
 
 | Appearance (mobile version):  ||
 | --- | --- |
-| ![ios-17 4](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/bd2f8c1c-f035-49f7-84bd-5ccbe3222332) | ![ios-17 4](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/d2ad3692-e56d-413a-bbec-4a441bee8170) |
+| ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/475202b8-0cd5-40e9-97a0-72f13a407ad3) | ![image](https://github.com/sergeiown/Map_with_Marker_Clusters/assets/112722061/60b9c8c9-be71-4085-89e2-e658960cff35) |
 | Portrait | Landscape |
 
 ## Technical resources and libraries
