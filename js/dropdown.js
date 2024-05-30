@@ -43,6 +43,7 @@ export async function createDropdown(map) {
             searchInput.value = '';
             updateOptions();
             searchInput.blur();
+            customDropdown.style.display = 'none';
         }
 
         updateOptions();
@@ -56,19 +57,23 @@ export async function createDropdown(map) {
             customDropdown.style.display = 'block';
         });
 
-        searchInput.addEventListener('blur', () => {
-            setTimeout(() => {
-                customDropdown.style.display = 'none';
-            }, 100);
-        });
-
-        // Disable map scroll zoom when mouse is over the dropdown
+        // Tracking the active element to prevent dropdowns from closing
+        let isDropdownFocused = false;
         customDropdown.addEventListener('mouseenter', () => {
+            isDropdownFocused = true;
             map.scrollWheelZoom.disable();
         });
-
         customDropdown.addEventListener('mouseleave', () => {
+            isDropdownFocused = false;
             map.scrollWheelZoom.enable();
+        });
+
+        searchInput.addEventListener('blur', () => {
+            setTimeout(() => {
+                if (!isDropdownFocused) {
+                    customDropdown.style.display = 'none';
+                }
+            }, 100);
         });
 
         L.DomEvent.disableClickPropagation(container);

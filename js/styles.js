@@ -66,6 +66,21 @@ export function addStyles() {
         z-index: 1000;
         display: none;
     }
+
+    .custom-dropdown::-webkit-scrollbar {
+        width: 10px;
+        background-color: rgb(245, 245, 245);
+        border-radius: 5px;
+      }
+      
+    .custom-dropdown::-webkit-scrollbar-thumb {
+        background-color: rgb(150, 150, 150);
+        border-radius: 5px;
+      }
+      
+    .custom-dropdown::-webkit-scrollbar-button {
+        display: none;
+      }
     
     .custom-dropdown-item {
         overflow-x: hidden;
@@ -184,11 +199,11 @@ export function addStyles() {
         filter: drop-shadow(4px 12px 6px rgba(0, 0, 0, 0.5));
     }
     
-    .leaflet-popup-content-wrapper {
+    .leaflet-popup-content-wrapper,
+    .leaflet-popup-tip {
         background-color: rgb(245, 245, 245);
     }
     
     `;
-
     document.head.appendChild(styleTag);
 }
