@@ -203,6 +203,13 @@ export function addStyles() {
     .leaflet-popup-tip {
         background-color: rgb(245, 245, 245);
     }
+
+    .open-street-view {
+        cursor: pointer;
+        margin-top: 5px;
+        border: 1px solid rgb(150, 150, 150);
+        border-radius: 5px;
+    }
     
     `;
     document.head.appendChild(styleTag);

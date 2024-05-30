@@ -1,65 +1,65 @@
 [
     {
-        "lat": 50.45090527867344,
-        "lng": 30.521412882155204,
+        "lat": 49.843913381654225,
+        "lng": 24.02552417831965,
         "company": "Geek Code company of the future",
-        "address": "Somewhere in Ukraine",
+        "address": "проспект Свободи, 47, Львів",
         "info": "Tech solutions for the future",
         "marker": "blue"
     },
     {
-        "lat": 50.39798439220319,
-        "lng": 30.6342321059475,
+        "lat": 49.42116989545102,
+        "lng": 26.985180004846036,
         "company": "Byte Crafters",
-        "address": "Somewhere in Ukraine",
+        "address": "вул. Володимирська, 77, Хмельницкий",
         "info": "Innovating IT landscapes",
         "marker": "red"
     },
     {
-        "lat": 50.454785925459,
-        "lng": 30.35632210606147,
+        "lat": 46.96376974172385,
+        "lng": 32.032094568589706,
         "company": "IT mindset",
-        "address": "Somewhere in Ukraine",
+        "address": "вулиця 10-а Слобідська, 7, Миколаїв, Миколаївська область, 54000",
         "info": "Development and improvement",
         "marker": "green"
     },
     {
-        "lat": 49.58879379529434,
-        "lng": 34.553311010136014,
+        "lat": 48.471390354380674,
+        "lng": 35.03456052681161,
         "company": "Desperate cyberneticists of our time",
-        "address": "Somewhere in Ukraine",
+        "address": "проспект Дмитра Яворницького, 76, Дніпро, 49000",
         "info": "Navigating the digital world",
         "marker": "pink"
     },
     {
-        "lat": 46.966973478544574,
-        "lng": 32.004143900863355,
+        "lat": 48.52546908447327,
+        "lng": 35.04675009704337,
         "company": "Data Wizards",
-        "address": "Somewhere in Ukraine",
+        "address": "вул.Старочумацька, 78Б, Дніпро, Дніпропетровська область",
         "info": "Unleashing the power of data",
         "marker": "orange"
     },
     {
-        "lat": 49.4186548962826,
-        "lng": 26.97717159437349,
+        "lat": 50.4509948304185,
+        "lng": 30.524044369876794,
         "company": "Creative hub of innovation",
-        "address": "Somewhere in Ukraine",
+        "address": "вулиця Хрещатик, 16, Київ, 02000",
         "info": "Fueling creativity in IT",
         "marker": "green"
     },
     {
-        "lat": 49.844679061164385,
-        "lng": 24.025990393012652,
+        "lat": 50.399398642888706,
+        "lng": 30.649763519134208,
         "company": "Cyber Hub",
-        "address": "Somewhere in Ukraine",
+        "address": "проспект Миколи Бажана, 36, Київ",
         "info": "Navigating IT",
         "marker": "blue"
     },
     {
-        "lat": 49.54129501243554,
-        "lng": 34.501043826369646,
+        "lat": 50.42309525054951,
+        "lng": 30.5667198751106,
         "company": "Data Crafters",
-        "address": "Somewhere in Ukraine",
+        "address": "вулиця Микільсько-Хутірська, 56, Київ",
         "info": "IT solutions",
         "marker": "red"
     }

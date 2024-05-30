@@ -14,7 +14,14 @@ function createMarkers(map, data) {
         });
 
         const marker = L.marker([address.lat, address.lng], { icon: customIcon });
-        const popupContent = `<b>${address.company}</b><br>${address.address}<br><small>${address.info}`;
+        const popupContent = `
+            <b>${address.company}</b><br>
+            ${address.address}<br>
+            <small>${address.info}</small><br>
+            <button class="open-street-view" data-lat="${address.lat}" data-lng="${address.lng}">
+                Open Street View
+            </button>
+        `;
         const popupOptions = {
             closeButton: true,
             closeOnEscapeKey: true,
@@ -60,6 +67,34 @@ function createMarkers(map, data) {
             markers.addLayer(marker);
             map.addLayer(markers);
         }, delay);
+    });
+
+    map.on('popupopen', function (e) {
+        const openStreetViewButtons = document.querySelectorAll('.open-street-view');
+        openStreetViewButtons.forEach((button) => {
+            button.addEventListener('click', function () {
+                const lat = this.getAttribute('data-lat');
+                const lng = this.getAttribute('data-lng');
+                const popupWidth = window.innerWidth * 0.9;
+                const popupHeight = window.innerHeight * 0.9;
+                const leftPosition = (window.innerWidth - popupWidth) / 2;
+                const topPosition = (window.innerHeight - popupHeight) / 2;
+                const streetViewUrl = `https://www.google.com/maps?q=&layer=c&cbll=${lat},${lng}`;
+                const popupWindow = window.open(
+                    streetViewUrl,
+                    '_blank',
+                    `width=${popupWidth}, height=${popupHeight}, left=${leftPosition}, top=${topPosition}`
+                );
+
+                if (popupWindow) {
+                    window.addEventListener('beforeunload', function () {
+                        popupWindow.close();
+                    });
+                } else {
+                    console.error('Could not open the frame.');
+                }
+            });
+        });
     });
 }
 
