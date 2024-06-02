@@ -6,6 +6,7 @@ import { isMobile } from '../js/mobileDetector.js';
 import { createControlButton } from '../js/buttons.js';
 import { addLegend } from '../js/legend.js';
 import { toggleFullScreen } from '../js/fullScreen.js';
+import { openPopupWindow } from '../js/popupWindow.js';
 import { updateControlStyle, updateLayer, gradualOpacityAnimation } from '../js/mapUtils.js';
 
 export function initializeMap() {
@@ -47,23 +48,8 @@ export function initializeMap() {
         title: 'Front line map',
         imageSrc: './markers/front.png',
         onClick: function () {
-            const popupWidth = window.innerWidth * 0.9;
-            const popupHeight = window.innerHeight * 0.9;
-            const leftPosition = (window.innerWidth - popupWidth) / 2;
-            const topPosition = (window.innerHeight - popupHeight) / 2;
-            const popupWindow = window.open(
-                'https://deepstatemap.live/#6/49.1/31.2',
-                '_blank',
-                `width=${popupWidth}, height=${popupHeight}, left=${leftPosition}, top=${topPosition}`
-            );
-
-            if (popupWindow) {
-                window.addEventListener('beforeunload', function () {
-                    popupWindow.close();
-                });
-            } else {
-                console.error('Could not open the frame.');
-            }
+            const frontLineMapUrl = 'https://deepstatemap.live/#6/49.1/31.2';
+            openPopupWindow(frontLineMapUrl);
         },
     });
     map.addControl(new frontButton());

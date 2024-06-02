@@ -3,6 +3,7 @@ https://github.com/sergeiown/Map_with_Marker_Clusters/blob/main/LICENSE */
 
 import { getCompaniesData } from '../js/companiesData.js';
 import { isMobile } from '../js/mobileDetector.js';
+import { openPopupWindow } from '../js/popupWindow.js';
 
 function createMarkers(map, data) {
     const markers = L.markerClusterGroup();
@@ -80,24 +81,8 @@ function createMarkers(map, data) {
             button.addEventListener('click', function () {
                 const lat = this.getAttribute('data-lat');
                 const lng = this.getAttribute('data-lng');
-                const popupWidth = window.innerWidth * 0.9;
-                const popupHeight = window.innerHeight * 0.9;
-                const leftPosition = (window.innerWidth - popupWidth) / 2;
-                const topPosition = (window.innerHeight - popupHeight) / 2;
                 const streetViewUrl = `https://www.google.com/maps?q=&layer=c&cbll=${lat},${lng}`;
-                const popupWindow = window.open(
-                    streetViewUrl,
-                    '_blank',
-                    `width=${popupWidth}, height=${popupHeight}, left=${leftPosition}, top=${topPosition}`
-                );
-
-                if (popupWindow) {
-                    window.addEventListener('beforeunload', function () {
-                        popupWindow.close();
-                    });
-                } else {
-                    console.error('Could not open the frame.');
-                }
+                openPopupWindow(streetViewUrl);
             });
         });
     });
