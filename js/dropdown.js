@@ -14,7 +14,7 @@ export async function createDropdown(map) {
 
         const searchInput = L.DomUtil.create('input', 'company-search-input', container);
         searchInput.type = 'text';
-        searchInput.placeholder = '    Почніть пошук...';
+        searchInput.placeholder = 'Почніть пошук...';
         searchInput.maxLength = 35;
 
         const customDropdown = L.DomUtil.create('div', 'custom-dropdown', container);
@@ -115,19 +115,32 @@ export async function createDropdown(map) {
     function animatePlaceholder(searchInput, maxLength, placeholder) {
         let placeholderIndex = 0;
         let direction = 1;
-        let animationSpeed = 750;
+        let animationSpeed = 1500;
+        let isInputFocused = false;
 
-        const generatePlaceholder = (index) => `${placeholder}${' '.repeat(index)}🔎`;
+        const generatePlaceholder = (index) => `${placeholder}${'     '.repeat(index)}🔎`;
 
         const animate = () => {
-            searchInput.placeholder = generatePlaceholder(placeholderIndex);
-            placeholderIndex += direction;
-            if (placeholderIndex >= maxLength - placeholder.trim().length || placeholderIndex <= 0) {
-                direction *= -1;
+            if (!isInputFocused) {
+                searchInput.placeholder = generatePlaceholder(placeholderIndex);
+                placeholderIndex += direction;
+                if (placeholderIndex >= maxLength - placeholder.trim().length - 13 || placeholderIndex <= 0) {
+                    direction *= -1;
+                }
+                setTimeout(animate, animationSpeed);
             }
-            setTimeout(animate, animationSpeed);
         };
 
         animate();
+
+        searchInput.addEventListener('focus', () => {
+            isInputFocused = true;
+            searchInput.placeholder = '';
+        });
+
+        searchInput.addEventListener('blur', () => {
+            isInputFocused = false;
+            animate();
+        });
     }
 }
