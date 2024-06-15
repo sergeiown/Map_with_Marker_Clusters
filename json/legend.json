@@ -1,26 +1,26 @@
 [
     {
-        "description": "компанії тип 1",
+        "description": "Type 1 companies",
         "marker": "blue"
     },
     {
-        "description": "компанії тип 2",
+        "description": "Type 2 companies",
         "marker": "red"
     },
     {
-        "description": "компанії тип 3",
+        "description": "Type 3 companies",
         "marker": "green"
     },
     {
-        "description": "компанії тип 4",
+        "description": "Type 4 companies",
         "marker": "orange"
     },
     {
-        "description": "без визначення",
+        "description": "Type 5 companies",
         "marker": "pink"
     },
     {
-        "description": "кластер",
+        "description": "cluster",
         "marker": "cluster"
     }
 ]

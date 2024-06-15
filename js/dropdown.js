@@ -14,7 +14,7 @@ export async function createDropdown(map) {
 
         const searchInput = L.DomUtil.create('input', 'company-search-input', container);
         searchInput.type = 'text';
-        searchInput.placeholder = 'Почніть пошук...';
+        searchInput.placeholder = 'Get started with your search';
         searchInput.maxLength = 35;
 
         const customDropdown = L.DomUtil.create('div', 'custom-dropdown', container);
@@ -124,7 +124,7 @@ export async function createDropdown(map) {
             if (!isInputFocused) {
                 searchInput.placeholder = generatePlaceholder(placeholderIndex);
                 placeholderIndex += direction;
-                if (placeholderIndex >= maxLength - placeholder.trim().length - 13 || placeholderIndex <= 0) {
+                if (placeholderIndex >= maxLength - placeholder.trim().length - 5 || placeholderIndex <= 0) {
                     direction *= -1;
                 }
                 setTimeout(animate, animationSpeed);
