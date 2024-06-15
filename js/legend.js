@@ -27,7 +27,7 @@ export function addLegend(map) {
                 div.appendChild(legendTitle);
 
                 const h3 = document.createElement('h3');
-                h3.innerText = 'Легенда:';
+                h3.innerText = 'Legend:';
                 legendTitle.appendChild(h3);
 
                 legendData.forEach((item) => {
