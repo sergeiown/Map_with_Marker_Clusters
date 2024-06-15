@@ -1,26 +1,26 @@
 [
     {
-        "description": "Type 1 companies",
+        "description": "Companies type 1",
         "marker": "blue"
     },
     {
-        "description": "Type 2 companies",
+        "description": "Companies type 2",
         "marker": "red"
     },
     {
-        "description": "Type 3 companies",
+        "description": "Companies type 3",
         "marker": "green"
     },
     {
-        "description": "Type 4 companies",
+        "description": "Companies type 4",
         "marker": "orange"
     },
     {
-        "description": "Type 5 companies",
+        "description": "Companies type 5",
         "marker": "pink"
     },
     {
-        "description": "cluster",
+        "description": "Cluster",
         "marker": "cluster"
     }
 ]
