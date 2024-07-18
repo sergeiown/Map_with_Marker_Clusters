@@ -41,7 +41,7 @@ export function addStyles() {
         border-radius: 5px;
         border: 2px solid rgb(150, 150, 150);
         background-color: rgb(245, 245, 245);
-        color: rgb(40, 40, 40);
+        color: rgb(0, 0, 0);
         height: 25px;
         width: 250px;
         font-weight: bold;
@@ -50,7 +50,7 @@ export function addStyles() {
     }
     
     .company-search-input::placeholder {
-        color: rgb(40, 40, 40);
+        color: rgb(0, 0, 0);
     }
     
     .custom-dropdown {
@@ -124,7 +124,7 @@ export function addStyles() {
         font-size: 14px;
         line-height: 2;
         background-color: rgb(245, 245, 245);
-        color: rgb(40, 40, 40);
+        color: rgb(0, 0, 0);
         border-radius: 5px;
         border: none !important;
     }
@@ -139,7 +139,7 @@ export function addStyles() {
     }
     
     .leaflet-control-scale-line {
-        color: rgb(40, 40, 40);
+        color: rgb(0, 0, 0);
         border: 2px solid rgb(150, 150, 150);
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
@@ -176,7 +176,7 @@ export function addStyles() {
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
         padding: 10px;
-        color: rgb(40, 40, 40);
+        color: rgb(0, 0, 0);
     }
     
     .legend-title {
