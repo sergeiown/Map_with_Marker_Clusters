@@ -18,7 +18,7 @@ export function initializeMap() {
     const centerButton = createControlButton({
         position: 'topleft',
         title: 'Set the default position',
-        imageSrc: './markers/default.png',
+        imageSrc: './markers/default.svg',
         onClick: function () {
             map.flyTo([49.1, 31.2], initialZoom, {
                 duration: 3,
@@ -32,7 +32,7 @@ export function initializeMap() {
         const fullScreenButton = createControlButton({
             position: 'topleft',
             title: 'Set full screen mode',
-            imageSrc: './markers/full_screen.png',
+            imageSrc: './markers/full_screen.svg',
             extraClass: 'full-screen-button',
             onClick: function () {
                 const mapContainer = document.getElementById('map');
@@ -46,7 +46,7 @@ export function initializeMap() {
     const frontButton = createControlButton({
         position: 'bottomleft',
         title: 'Front line map',
-        imageSrc: './markers/front.png',
+        imageSrc: './markers/front.svg',
         onClick: function () {
             const frontLineMapUrl = 'https://deepstatemap.live/#6/49.1/31.2';
             openPopupWindow(frontLineMapUrl);
@@ -59,7 +59,7 @@ export function initializeMap() {
         const legendButton = createControlButton({
             position: 'topright',
             title: 'Legend',
-            imageSrc: './markers/legend.png',
+            imageSrc: './markers/legend.svg',
             onClick: function () {
                 addLegend(map);
             },

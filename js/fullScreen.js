@@ -68,10 +68,10 @@ function updateFullScreenButton(isFullScreen) {
     if (fullScreenButton) {
         if (isFullScreen) {
             fullScreenButton.title = 'Exit full screen mode';
-            fullScreenButton.querySelector('img').src = './markers/general_screen.png';
+            fullScreenButton.querySelector('img').src = './markers/general_screen.svg';
         } else {
             fullScreenButton.title = 'Set full screen mode';
-            fullScreenButton.querySelector('img').src = './markers/full_screen.png';
+            fullScreenButton.querySelector('img').src = './markers/full_screen.svg';
         }
     }
 }
