@@ -25,7 +25,7 @@ class FullScreenButton extends L.Control {
 
         this._eventHandlers = {
             fullscreenchange: this._throttle(() => this._handleFullScreenChange(container, map), 100),
-            keydown: this._preventF11Default.bind(this),
+            keydown: (event) => this._preventF11Default(event, map),
         };
 
         this._addEventListeners();
@@ -96,7 +96,7 @@ class FullScreenButton extends L.Control {
         }
     }
 
-    _preventF11Default(event) {
+    _preventF11Default(event, map) {
         if (event.key === 'F11') {
             event.preventDefault();
             this.toggleFullScreen(map);
@@ -110,6 +110,7 @@ class FullScreenButton extends L.Control {
 
         const exitFullScreenIconDefault = `
             <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4a1 1 0 00-2 0v2.5a.5.5 0 01-.5.5H4a1 1 0 000 2h2.5A2.5 2.5 0 009 6.5V4zM9 20a1 1 0 11-2 0v-2.5a.5.5 0 00-.5-.5H4a1 1 0 110-2h2.5A2.5 2.5 0 019 17.5V20zM16 3a1 1 0 00-1 1v2.5A2.5 2.5 0 0017.5 9H20a1 1 0 100-2h-2.5a.5.5 0 01-.5-.5V4a1 1 0 00-1-1zM15 20a1 1 0 102 0v-2.5a.5.5 0 01.5-.5H20a1 1 0 100-2h-2.5a2.5 2.5 0 00-2.5 2.5V20z" fill="#000"/></svg>
+
         `;
 
         const iconUrl = isFullScreen
@@ -178,21 +179,16 @@ class FullScreenButton extends L.Control {
         this._notificationElement = notification;
 
         this._notificationTimeout = setTimeout(() => {
-            notification.style.transition = 'opacity 1s';
-            notification.style.opacity = '0';
-
-            setTimeout(() => {
-                if (notification.parentElement) {
-                    mapContainer.removeChild(notification);
-                }
+            if (this._notificationElement) {
+                mapContainer.removeChild(this._notificationElement);
                 this._notificationElement = null;
-            }, 1000);
-        }, 3000);
+            }
+        }, 2000);
     }
 }
 
-L.control.fullScreenButton = function (options) {
-    return new FullScreenButton(options);
-};
+L.Control.FullScreenButton = FullScreenButton;
 
-export default L.control.fullScreenButton;
+L.control.fullScreenButton = function (options) {
+    return new L.Control.FullScreenButton(options);
+};
