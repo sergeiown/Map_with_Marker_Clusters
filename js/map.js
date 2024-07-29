@@ -5,9 +5,9 @@ import * as layers from '../js/layers.js';
 import { isMobile } from '../js/mobileDetector.js';
 import { createControlButton } from '../js/buttons.js';
 import { addLegend } from '../js/legend.js';
-import { toggleFullScreen } from '../js/fullScreen.js';
 import { openPopupWindow } from '../js/popupWindow.js';
 import { updateControlStyle, updateLayer, gradualOpacityAnimation } from '../js/mapUtils.js';
+import '../js/fullScreen.js';
 
 export function initializeMap() {
     const initialZoom = isMobile ? 5 : 6;
@@ -27,19 +27,13 @@ export function initializeMap() {
     });
     map.addControl(new centerButton());
 
-    // Creation of full screen button for desktop device
+    // Creat a full screen button
     if (!isMobile) {
-        const fullScreenButton = createControlButton({
-            position: 'topleft',
-            title: 'Set full screen mode',
-            imageSrc: './markers/full_screen.svg',
-            extraClass: 'full-screen-button',
-            onClick: function () {
-                const mapContainer = document.getElementById('map');
-                toggleFullScreen(mapContainer);
-            },
-        });
-        map.addControl(new fullScreenButton());
+        L.control
+            .fullScreenButton({
+                position: 'topleft',
+            })
+            .addTo(map);
     }
 
     // Create a button to call the external map frame

@@ -210,6 +210,45 @@ export function addStyles() {
         border: 1px solid rgb(150, 150, 150);
         border-radius: 5px;
     }
+
+    .pseudo-fullscreen {
+        background-color: #ffffff;
+        top: 0;
+        left: 0;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 9999 !important;
+    }
+
+    .leaflet-control-fullscreen {
+        background-color: rgb(245, 245, 245);
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgb(150, 150, 150) !important;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    #map-notification {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #00000099;
+        color: #ffffff;
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-radius: 5px;
+        z-index: 9999;
+    }
     
     `;
     document.head.appendChild(styleTag);
